@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/registerPhone/registerPhone",
+    "pages/uploadPassport/uploadPassport",
+    "pages/uploadBankcard/uploadBankcard",
+    "pages/registerComplete/registerComplete",
+    "pages/navHome/navHome",
+    "pages/navConsumerRebate/navConsumerRebate",
+    "pages/navTicketRebate/navTicketRebate", 
+    "pages/navMine/navMine", 
+    
+    "pages/test/test",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F5F5F5",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
