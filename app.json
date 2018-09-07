@@ -12,7 +12,20 @@
     "pages/navHome/navHome",
     "pages/navConsumerRebate/navConsumerRebate",
     "pages/navTicketRebate/navTicketRebate", 
-    "pages/navMine/navMine", 
+    "pages/navMine/navMine",
+    "pages/cooperativeShop/cooperativeShop",
+    "pages/CRcoopShopDetails/CRcoopShopDetails",
+    "pages/TRcoopShopDetails/TRcoopShopDetails",
+    "pages/TRaddAppointment/TRaddAppointment",
+    "pages/TRaddTicket'/TRaddTicket",
+    "pages/TRaddTicketFinish'/TRaddTicketFinish",
+    "pages/CRrecord'/CRrecord",
+    "pages/TRrecord'/TRrecord",
+    "pages/TRrecordDetails'/TRrecordDetails",
+    "pages/modifyPhone/modifyPhone",
+    "pages/modifyPassport/modifyPassport",
+    "pages/modifyBankcard/modifyBankcard",
+    
     
     "pages/test/test",
     "pages/logs/logs"
