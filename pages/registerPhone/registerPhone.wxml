@@ -1,2 +1,19 @@
 <!--pages/registerPhone/registerPhone.wxml-->
-<text>注册手机</text>
+<!-- <text>注册手机</text> -->
+<view class='page'>
+  <view class="container">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>  
+  <view class='content'>
+    <input class='content_iphone' placeholder='手机号' placeholder-class="center" type='text'></input>
+    <input class='content_VerificationCode' placeholder='验证码' placeholder-class="center" type='text'></input>
+    <view class='content_obtain'>获取验证码</view>
+    <view class='content_next' bindtap='next'>下一步</view>
+  </view>
+</view>

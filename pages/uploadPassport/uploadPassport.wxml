@@ -1,2 +1,17 @@
 <!--pages/uploadPassport/uploadPassport.wxml-->
-<text>上传护照</text>
+<!-- <text>上传护照</text> -->
+<view class='content'>
+  <text class='content_passportText'>
+    上传护照
+    成为流连代购会员
+  </text>
+  <view class='content_HeadPortrait' bindtap="chooseimage">
+    <image wx:if="{{atempFilePaths == ''}}"  class='content_img' src='{{backgroundImg}}'></image>
+    <view class='content_passport' wx:if="{{atempFilePaths != ''}}">
+      <image  bindtap="chooseimage" data-status="1" class='content_passportImg'  src="{{atempFilePaths }}" catchTap="chooseImageTap" mode="aspectFit"  />
+      <view class='content_cameraLogo'><image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/registered_icon_camera@3x.png'></image></view>
+    </view>
+  </view>
+  <view class='content_next' bindtap='next'>下一步</view>
+  <view class='content_skip'>跳过此步骤></view>
+</view>

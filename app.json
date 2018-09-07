@@ -1,9 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/registerPhone/registerPhone",
-    "pages/uploadPassport/uploadPassport",
     "pages/uploadBankcard/uploadBankcard",
+    
+
+   
+    "pages/uploadPassport/uploadPassport",
+    
+    "pages/index/index",
     "pages/registerComplete/registerComplete",
     "pages/navHome/navHome",
     "pages/navConsumerRebate/navConsumerRebate",
