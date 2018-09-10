@@ -1,1 +1,170 @@
 /* pages/navHome/navHome.wxss */
+.f1 {
+  float: left;
+}
+.r1 {
+  float: right;
+}
+.swiper {
+  position: relative;
+}
+.swiper image {
+  width: 100%;
+  height: auto;
+}
+.swiper_text {
+  width: 750rpx;
+  height: 220rpx;
+  position: absolute;
+  left: 0;
+  top:214rpx;
+}
+.swiper_textIntroduce {
+  display: block;
+  text-align: center;
+  font-size: 56rpx;
+  color: #fff;
+}
+.swiper_textLink {
+   display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.index {
+  width: 750rpx;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+ 
+}
+.main {
+  width: 750rpx;
+  height: 250rpx;
+  background: #eee;
+}
+.main_consumption {
+  width:374.5rpx;
+  height: 240rpx;
+  margin-top: 5rpx;
+}
+.main_SmallTicket {
+  width:374.5rpx;
+  height: 240rpx;
+  margin-top: 5rpx;
+}
+.main image {
+  width:374.5rpx;
+  height: 240rpx;
+  display: block;
+}
+.nav_text {
+  width:750rpx;
+  height: 140rpx;
+  position: relative;
+}
+.nav {
+  border-bottom: 1px solid #eee;
+}
+.nav_ReturnPoint {
+  width:750rpx;
+  height: 140rpx;
+  display: block;
+  line-height: 140rpx;
+  font-size: 38rpx;
+  color: #4B4B4B;
+  text-indent: 24rpx;
+}
+.nav_time {
+  position: absolute;
+  right: 24rpx;
+  top: 73rpx;
+  font-size: 20rpx;
+  color: #939393;
+}
+.table {
+  width:750rpx;
+  height: 140rpx;
+  background: #eee;
+}
+.table_left {
+  width:374.5rpx;
+  height: 139rpx;
+  background: #fff;
+ 
+}
+.table_right {
+  width:374.5rpx;
+  height: 139rpx;
+  background: #fff;
+  
+}
+.table_right text {
+  width:100%;
+  display: block;
+  clear: both;
+  margin: 17rpx 0 0 20rpx;
+}
+.table_left text {
+  width:374.5rpx;
+  display: block;
+  clear: both;
+  margin: 17rpx 0 0 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.table_leftText1 {
+  font-size:28rpx; 
+  color:#525252; 
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.table_leftText2 {
+  font-size:22rpx; 
+  color:#969696;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.table_rightText1 {
+  font-size:28rpx; 
+  color:#525252; 
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.table_rightText2 {
+  font-size:22rpx; 
+  color:#969696;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.footer {
+  width: 750rpx;
+  height: 250rpx;
+  background:#FC4748;
+  border-top: 5px solid #eee;
+  border-bottom:6px solid #eee;
+  position: relative;
+}
+.footer_wcome {
+font-size: 38rpx;
+color: #fff;
+position: absolute;
+left: 24rpx;
+top: 23rpx;
+}
+.footer_link {
+font-size: 38rpx;
+color: #fff;
+position: absolute;
+left: 24rpx;
+bottom: 27rpx;
+}

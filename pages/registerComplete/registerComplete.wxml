@@ -1,2 +1,44 @@
 <!--pages/registerComplete/registerComplete.wxml-->
-<text>注册完成</text>
+<!-- <text>注册完成</text> -->
+
+<view class='index'>
+  <text class='index_text'>
+    您已完成基本信息录入
+    请检查您的手机号、护照及银行卡无误
+  </text>
+  <view class="container">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content_h1'>
+      手机号：<span>17601620130</span>
+    </view> 
+    <view class='content_h1'>
+      持卡人：<span>王五</span>
+    </view> 
+    <view class='content_h1'>
+      银行：<span>中国银行（沙河口支行）</span>
+    </view> 
+    <view class='content_h1'>
+      卡号：<span>6217900100007973665</span>
+    </view> 
+    <view class='content_clear'></view>
+    <view class='content_card'>
+      <view class='content_cardPassport'>
+        <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/top_img_consumption@3x.png'></image>
+        <text>护照</text>
+      </view>    
+      <view class='content_cardBank'>
+        <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/top_img_receipt@3x.png'></image>
+        <text>银行卡</text>
+      </view>   
+    </view>
+    <view bindtap='start' class='content_start'>开始使用</view>
+  </view>  
+</view>

@@ -1,15 +1,14 @@
 {
   "pages":[
-    "pages/registerPhone/registerPhone",
-    "pages/uploadBankcard/uploadBankcard",
-    
-
-   
-    "pages/uploadPassport/uploadPassport",
-    
-    "pages/index/index",
-    "pages/registerComplete/registerComplete",
     "pages/navHome/navHome",
+    "pages/index/index",
+
+    
+    "pages/registerComplete/registerComplete",
+    
+    "pages/uploadBankcard/uploadBankcard",
+    "pages/registerPhone/registerPhone",
+    "pages/uploadPassport/uploadPassport",
     "pages/navConsumerRebate/navConsumerRebate",
     "pages/navTicketRebate/navTicketRebate", 
     "pages/navMine/navMine",
@@ -35,5 +34,37 @@
     "navigationBarBackgroundColor": "#F5F5F5",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#FF0000",
+    "borderStyle": "#FAFAFC",
+    "list": [
+      { "selectedIconPath": "static/img/home_selected@3x.png",
+        "iconPath": "static/img/home__normal@3x.png",
+        "pagePath": "pages/navHome/navHome",
+        "text": "首页"
+      },
+      { 
+        "selectedIconPath": "static/img/scan_selected@3x.png",
+        "iconPath": "static/img/scan__normal@3x.png",
+        "pagePath": "pages/navConsumerRebate/navConsumerRebate",
+        "text": "消费返利"
+      },
+      {
+        "selectedIconPath": "static/img/receipt_selected@3x.png",
+        "iconPath": "static/img/receipt__normal@3x.png",
+        "pagePath": "pages/navTicketRebate/navTicketRebate",
+        "text": "小票返利"
+      },
+      {
+        "selectedIconPath": "static/img/personal_selected@3x.png",
+        "iconPath": "static/img/personal__normal@3x.png",
+        "pagePath": "pages/navMine/navMine",
+        "text": "我的"
+      }
+    ]
   }
+  
 }

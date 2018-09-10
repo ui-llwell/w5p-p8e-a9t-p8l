@@ -31,7 +31,7 @@
 }
 
 .userinfo-nickname {
-  color: #000;
+  color: #232627;
   font-size: 44rpx;
   margin-top: 36rpx;
   margin-bottom: 70rpx;

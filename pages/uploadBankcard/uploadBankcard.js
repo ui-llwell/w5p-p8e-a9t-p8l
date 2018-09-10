@@ -39,7 +39,7 @@ Page({
   },
   next: function () {
     wx.navigateTo({
-      url: '../uploadBankcard/uploadBankcard',
+      url: '../registerComplete/registerComplete',
     })
   },
   /**
