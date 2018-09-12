@@ -45,7 +45,8 @@ Page({
     })
   },
   start: function () {
-    wx.navigateTo({
+    console.log(111)
+    wx.switchTab({
       url: '../navHome/navHome',
     })
   }

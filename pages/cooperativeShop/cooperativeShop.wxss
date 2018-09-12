@@ -1,1 +1,118 @@
 /* pages/cooperativeShop/cooperativeShop.wxss */
+page,
+.page,
+.page__bd{
+    height: auto;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 21px;
+   
+}
+.weui-tab__panel {
+  overflow: visible;
+}
+.weui-navbar__item.weui-bar__item_on {
+color:#FC595A;
+}
+
+.content .weui-navbar__slider {
+  background:#FC595A;
+}
+.content .weui-navbar__title {
+  overflow:visible;
+  text-overflow:clip;
+  white-space:normal;
+  word-wrap:normal;
+  max-width:9em;
+
+}
+.consumption_wrap {
+  width: 698rpx;
+  height: 391rpx;
+  position: relative;
+  margin: 0 auto 21rpx auto;
+}
+.consumption_wrapImg {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 698rpx;
+  height: 391rpx;
+  display: block;
+  border-radius: 9rpx;
+  overflow: hidden;
+ 
+}
+.consumption_wrap_Black{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 698rpx;
+  height: 391rpx;
+  display: block;
+  border-radius: 9rpx;
+  overflow: hidden;
+   /* background-color:rgba(0,0,0,.3); */
+  z-index: 1;
+}
+.consumption_wrapImg image {
+  width: 698rpx;
+  height: 391rpx;
+  display: block;
+}
+.consumption_wrapName {
+  width: 640rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 21rpx;
+  top:21rpx;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  z-index: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.consumption_wrapAddress {
+  width: 640rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 21rpx;
+  bottom: 57rpx;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  z-index: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+}
+.consumption_wrapIphone {
+  width: 640rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 21rpx;
+  bottom: 9rpx;
+  font-size: 28rpx;
+  text-align: right;
+  color: #FFFFFF;
+  z-index: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.footer_loge {
+  width: 443rpx;
+  height: 94rpx;
+  margin: 0 auto;
+  padding-top: 176rpx;
+  padding-bottom: 25rpx;
+}
+.footer_loge image {
+  width: 443rpx;
+  height: 94rpx;
+  display: block;
+}

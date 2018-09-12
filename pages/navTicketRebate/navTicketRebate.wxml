@@ -1,2 +1,31 @@
 <!--pages/navTicketRebate/navTicketRebate.wxml-->
-<text>小票返利</text>
+<!-- <text>小票返利</text> -->
+<view class='index'>
+<view class='content'>
+
+  <view class='main loop'>
+    <view class='main_top'>
+      <view class='main_topJourney'>
+        <text class='main_topJourney f1'>去程：大韩航空 PN134123</text>
+        <text class='main_topTime r1'>2018年8月12日</text>
+      </view>
+      <view class='main_topJourney'>
+        <text class='main_topJourney f1'>回程：大韩航空 PN134146</text>
+        <text class='main_topTime r1'>2018年8月19日</text>
+      </view>
+    </view>
+    <view class='main_center'>
+      <text>已选免税店：韩国爱宝客免税店、韩国格乐丽雅免税店、韩国新世界明洞免税店</text>
+    </view>
+    <view class='main_bottom'>
+      <text>编辑预约</text>
+      <text bindtap='aadTicket'>录入小票</text>
+    </view>
+  </view>
+
+
+
+
+</view>
+<view class='add'>添加预约</view>
+</view>

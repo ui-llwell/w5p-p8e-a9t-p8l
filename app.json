@@ -1,22 +1,35 @@
 {
   "pages":[
-    "pages/navHome/navHome",
-    "pages/index/index",
 
     
-    "pages/registerComplete/registerComplete",
-    
+    "pages/TRaddTicket/TRaddTicket",
     "pages/uploadBankcard/uploadBankcard",
+    "pages/navTicketRebate/navTicketRebate",
+    
+    "pages/CRcoopShopDetails/CRcoopShopDetails",
+    
+    "pages/registerComplete/registerComplete",
+   
+    "pages/cooperativeShop/cooperativeShop",
+    "pages/navConsumerRebate/navConsumerRebate",
+    
+    "pages/navHome/navHome",
+
+    "pages/index/index",
+    
+    
+    
+    
     "pages/registerPhone/registerPhone",
     "pages/uploadPassport/uploadPassport",
-    "pages/navConsumerRebate/navConsumerRebate",
-    "pages/navTicketRebate/navTicketRebate", 
+    
+    
     "pages/navMine/navMine",
-    "pages/cooperativeShop/cooperativeShop",
-    "pages/CRcoopShopDetails/CRcoopShopDetails",
+   
+    
     "pages/TRcoopShopDetails/TRcoopShopDetails",
     "pages/TRaddAppointment/TRaddAppointment",
-    "pages/TRaddTicket/TRaddTicket",
+    
     "pages/TRaddTicketFinish/TRaddTicketFinish",
     "pages/CRrecord/CRrecord",
     "pages/TRrecord/TRrecord",

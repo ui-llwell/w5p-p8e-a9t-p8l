@@ -1,2 +1,11 @@
 <!--pages/navConsumerRebate/navConsumerRebate.wxml-->
-<text>消费返利</text>
+<!-- <text>消费返利</text> -->
+<view class='content'>
+  <view class='img'>
+    <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/qrcode@3x.png'></image>
+  </view>
+  <text>
+    请在流连合作店铺消费时
+    出示此二维码
+  </text>
+</view>

@@ -1,1 +1,72 @@
 /* pages/navTicketRebate/navTicketRebate.wxss */
+.f1 {
+  float: left;
+}
+.r1 {
+  float: right;
+}
+.index {
+  position: relative;
+  width: 750rpx;
+  height: 100%;
+}
+.content {
+  width: 700rpx;
+  /* min-height: 810rpx; */
+  height: 840rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  overflow: auto;
+ 
+}
+.add {
+  width: 670rpx;
+  height: 94rpx;
+  background: #1AAD19;
+  border-radius: 10rpx;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  line-height: 94rpx;
+  margin: 124rpx auto 30rpx;
+
+}
+.main {
+  width: 670rpx;
+  height: 392rpx;
+  margin: 18rpx auto;
+  background: url(http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/receipt_bg@3x.png) no-repeat center top;
+  background-size: 100% 100%;
+  border-radius: 9rpx;
+  overflow: hidden;
+  color: #fff;
+}
+.main_top {
+  width: 630rpx;
+  height: 152rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.main_center {
+  width: 630rpx;
+  height: 100rpx;
+  padding: 10rpx 20rpx 28rpx;
+  font-family: PingFangSC-Light;
+  font-size: 24rpx;
+  overflow: auto;
+}
+.main_bottom {
+  width: 630rpx;
+  height: 40rpx;
+  padding: 0 20rpx;
+  font-family: PingFangSC-Light;
+  font-size: 30rpx;
+  display:flex;
+  justify-content: space-around;
+  line-height: 35rpx;
+}
+.main_bottom text:nth-child(1) {
+  border-right: 1px solid #fff;
+  padding-right: 135rpx;
+}

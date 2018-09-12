@@ -1,14 +1,6 @@
 <!--pages/navHome/navHome.wxml-->
 <!-- <text>首页</text> -->
 
-<!-- <swiper indicator-dots="{{indicatorDots}}" current="{{current}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperChange">
-  <block wx:for="{{imgUrls}}" wx:key="image">
-<swiper-item>
-  <image src="{{item.image}}" model="aspectFit" style="width: {{imageWidth}}px;" bindload="imageLoad" />
-</swiper-item>
-  </block>
-</swiper> -->
-
 <view class='swiper'>
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
     <block wx:for='{{imgList}}' wx:key="{{index}}">
@@ -47,7 +39,7 @@
     </view>
     <view class='footer'>
       <text class='footer_wcome'>WELCOME</text>
-      <text class='footer_link'>查看合作店铺	></text>
+      <text class='footer_link' bindtap='CooperativeShop'>查看合作店铺	></text>
     </view>
     
   </view>

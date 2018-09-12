@@ -1,1 +1,155 @@
 /* pages/CRcoopShopDetails/CRcoopShopDetails.wxss */
+page {
+  width: 750rpx;
+  height:95%;
+  background: #F4F4F4;
+  margin-top: 30rpx;
+}
+.header {
+  width: 700rpx;
+  /* height: 640rpx; */
+  margin: 0 auto 0 auto;
+  background: #fff;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.20);
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.img {
+  width: 700rpx;
+  height: 339rpx;
+}
+.img image {
+  width: 700rpx;
+  height: 339rpx;
+  display: block;
+}
+.text {
+  width: 650rpx;
+  height: auto;
+  padding: 10rpx 25rpx;
+ 
+}
+.h1 {
+  display: block;
+  font-family: PingFangSC-Regular;
+  font-size: 32rpx;
+  color: #000000;
+}
+.h2 {
+  width: 650rpx;
+  /* height: 150rpx; 
+  overflow: hidden;*/
+  display: block;
+  font-family: PingFangSC-Light;
+  font-size: 24rpx;
+  color: #8D8D8D;
+}
+.h3 {
+  font-size: 26rpx;
+  color: #000000;
+  width: 650rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.h3 image {
+  display: block;
+  width: 32rpx;
+  height: 35rpx;
+  float: right;
+  margin-left: 12rpx;
+  margin-top: 2rpx;
+}
+.h4 {
+  font-size: 26rpx;
+  color: #000000;
+  width: 650rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+.h4 image {
+  display: block;
+  width: 33rpx;
+  height: 33rpx;
+  margin-left: 12rpx;
+  float: right;
+  margin-top: 2rpx;
+}
+.content {
+  margin-bottom: 25rpx;
+}
+.content_wrap {
+  width: 650rpx;
+  height: 140rpx;
+  padding: 3rpx 25rpx;
+  background: #fff;
+  margin: 0 auto 4rpx;
+  box-shadow:0 1px 3px 0 rgba(0,0,0,0.10);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.content_wrapLeft {
+  width: 102.6rpx;
+  height: 102.6rpx;
+  flex: 1
+  
+}
+.content_wrapLeft image {
+  display: block;
+  width: 102.6rpx;
+  height: 102.6rpx;
+}
+
+.content_wrapCenter {
+  width: 202.6rpx;
+  height: 102.6rpx;
+  flex: 2.7
+}
+.content_wrapCenter text {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.content_brand {
+  font-size: 32rpx;
+  color: #F77062;
+}
+.content_num {
+  font-family: PingFangSC-Light;
+  font-size: 24rpx;
+  color: #393939;
+  padding-top: 5rpx;
+}
+.content_wrapRight {
+  width: 150rpx;
+  height: 102.6rpx;
+  flex: 1;
+  
+}
+.content_wrapRight view {
+  display: block;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #F77062;
+  text-align: center;
+}
+.content_wrapRight view image {
+  float: left;
+  width: 24rpx;
+  height: 23rpx;
+  display: block;
+  margin-top: 7rpx;
+  
+}

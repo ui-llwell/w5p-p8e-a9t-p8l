@@ -108,5 +108,9 @@ Page({
       url: '../navTicketRebate/navTicketRebate',
     })
   },
-
+  CooperativeShop: function(){
+    wx.navigateTo({
+      url: '../cooperativeShop/cooperativeShop',
+    })
+  }
 })

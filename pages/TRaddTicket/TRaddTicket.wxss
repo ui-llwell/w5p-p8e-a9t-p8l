@@ -1,1 +1,128 @@
 /* pages/TRaddTicket'/TRaddTicket.wxss */
+.f1 {
+  float: left;
+}
+.r1 {
+  float: right;
+}
+.index {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.header {
+  width: 750rpx;
+  height: 100%;
+  margin: 10rpx 0 30rpx;
+}
+.index_flight {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  font-size: 34rpx;
+  color: #000000;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.index_flightTime {
+  width: 490rpx;
+  height: 88rpx;
+  margin-left: 110rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 34rpx;
+}
+.index_input {
+  width: 750rpx;
+  height: 100%;
+  margin: 10rpx 0 0rpx;
+}
+.index_hot {
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  font-size: 34rpx;
+  color: #000000;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.indexNum  {
+  width: 490rpx;
+  height: 88rpx;
+  margin-left: 44rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular;
+  color: #B2B2B2;
+  }
+  .upload {
+    width: 690rpx;
+    padding:20rpx 30rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #888888;
+  }
+  .effect {
+    width: 690rpx;
+    height: 116rpx;
+    padding: 30rpx;
+    background: #fff;
+    position: relative;
+
+  }
+  .effect text {
+    width: 116rpx;
+    height: 116rpx;
+    line-height: 116rpx;
+    text-align: center;
+    display: block;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-size: 55rpx;
+  }
+  .cardImg {
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+
+  }
+  .cardImg image {
+    display: block;
+    width: 116rpx;
+    height: 116rpx;
+  }
+  .add {
+    width: 690rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding: 0 30rpx;
+    background: #fff;
+    font-size: 34rpx;
+    color: #000000;
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+    align-items:center;
+  }
+  .add input {
+    flex: 1
+  }
+  .add-li {
+    font-family: PingFangSC-Medium;
+    font-size: 28rpx;
+    color: #888888;
+    padding:20rpx 30rpx;
+  }
+  .add-li text {
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 50%;
+    margin-right: 10rpx;
+  }

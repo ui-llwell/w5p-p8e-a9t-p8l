@@ -1,2 +1,48 @@
 <!--pages/TRaddTicket'/TRaddTicket.wxml-->
-<text>pages/TRaddTicket'/TRaddTicket.wxml</text>
+<!-- <text>录入小票</text> -->
+
+<view class='index'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='header'>
+      <view class='index_flight'>
+        <text class='f1'>去程</text>
+        <text class="index_flightTime f1">大韩航空PN342123-2018.09.01</text>
+      </view>
+      <view class='index_flight'>
+        <text class='f1'>去程</text>
+        <text class="index_flightTime f1">大韩航空PN342123-2018.09.01</text>
+      </view>
+    </view>
+    
+    <view class='index_input'>
+      <view class='index_hot'>
+        <text class='f1'>小票编号</text>
+        <input type='text' class="indexNum f1" placeholder='请输入小票编号'></input>
+      </view>
+      <view class='index_hot'>
+        <text class='f1'>免税店名</text>
+        <input type='text' class="indexNum f1" placeholder='请选择免税店名'></input>
+      </view>
+    </view>
+
+    <view class='upload'>上传小票图片</view>
+    <view class='effect' bindtap="chooseimage">
+      <text wx:if="{{atempFilePaths == ''}}">+</text>
+      <view class='cardImg'  wx:if="{{atempFilePaths != ''}}">
+        <image bindtap="chooseimage" data-status="1" class='content_passportImg'  src="{{atempFilePaths }}" catchTap="chooseImageTap" mode="aspectFit" ></image>
+      </view>
+    </view>
+    <view class='upload'>品牌及商品信息（以美金$结算）</view>
+
+    <view  wx:for="{{lists}}" wx:key="{{index}}" data-index='{{index}}' >
+      <view class='add'>
+        品牌名称<input placeholder="请输入品牌" value='{{name1}}'  ></input>
+        品牌名称<input placeholder="请输入品牌" value='{{name2}}' ></input>
+        <button data-index='{{index}}'   bindtap='delList'>删除选项</button>
+      </view>
+    </view> 
+    <view class='add-li r1' bindtap='addList'><text>+</text>添加品牌及金额</view>
+    
+
+  </form>
+</view>
