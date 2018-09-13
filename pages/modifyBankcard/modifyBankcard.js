@@ -1,13 +1,42 @@
-// pages/modifyBankcard/modifyBankcard.js
+// pages/modifyPassport/modifyPassport.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    atempFilePaths: ''
   },
-
+  chooseimage: function () {
+    var that = this;
+    wx.showActionSheet({
+      itemList: ['从相册中选择', '拍照'],
+      itemColor: "#000",
+      success: function (res) {
+        if (!res.cancel) {
+          if (res.tapIndex == 0) {
+            that.chooseWxImage('album')
+          } else if (res.tapIndex == 1) {
+            that.chooseWxImage('camera')
+          }
+        }
+      }
+    })
+  },
+  chooseWxImage: function (type) {
+    var that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: [type],
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          atempFilePaths: res.tempFilePaths[0],
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,2 +1,20 @@
 <!--pages/modifyPhone/modifyPhone.wxml-->
-<text>pages/modifyPhone/modifyPhone.wxml</text>
+<!-- <text>我的手机号</text> -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='iphone'>
+    <view class='iphone_left'>
+      手机号码 <input type='text' placeholder='输入手机号'></input>
+    </view>
+    <view class='iphone_right'>获取验证码</view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      验证码 <input type='text' placeholder='输入手机号'></input>
+    </view>
+  </view>
+</form>
+<view class="weui-msg__extra-area">
+    <view class="weui-footer">
+        <view class='ok'>确定</view>
+    </view>
+</view>

@@ -36,13 +36,14 @@
 
     <view  wx:for="{{lists}}" wx:key="{{index}}" data-index='{{index}}' >
       <view class='add'>
-        品牌名称<input placeholder="请输入品牌" value='{{name1}}'  ></input>
-        品牌名称<input placeholder="请输入品牌" value='{{name2}}' ></input>
-        <button data-index='{{index}}'   bindtap='delList'>删除选项</button>
+        品牌名称<input placeholder="请输入品牌" value='{{name1}}'></input>
+        合计金额<input placeholder="请输入金额" value='{{name2}}'></input>
+        <view data-index='{{index}}'   bindtap='delList'>X</view>
       </view>
     </view> 
     <view class='add-li r1' bindtap='addList'><text>+</text>添加品牌及金额</view>
     
-
+      <button class="next" bindtap='next'>下一步</button>
+        
   </form>
 </view>

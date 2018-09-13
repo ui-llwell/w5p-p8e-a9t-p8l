@@ -1,1 +1,210 @@
 /* pages/navMine/navMine.wxss */
+page {
+  width: 750rpx;
+  height: 100%;
+  color: #F4F4F4;
+}
+.container {
+  width: 750rpx;
+  height: 100%;
+  
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+.userinfo-avatar {
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 50%;
+  margin-top: -115rpx;
+}
+
+.userinfo-nickname {
+  color: #232627;
+  font-size: 40rpx;
+  margin-top: 25rpx;
+  margin-bottom: 13rpx;
+}
+.content {
+  width: 750rpx;
+  height: 100%;
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+.header {
+  width: 750rpx;
+  height: 100%;
+  background: #fff;
+}
+.header_background {
+  width: 750rpx;
+  height: 297rpx;
+  background: lightblue
+}
+.content_rebate {
+  text-align: center;
+  padding-bottom: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #000000;
+  padding-top: 15rpx;
+}
+.content_all {
+  width: 750rpx;
+  height: 80rpx;
+  margin-bottom:30rpx; 
+}
+.content_all view {
+  width: 248rpx;
+  height: 80rpx;
+  float: left;
+  text-align: center;
+}
+.content_all view text {
+  display: block;
+}
+.content_center {
+  border-left: 1px solid #CED7DB;
+  border-right: 1px solid #CED7DB;
+}
+.content_num {
+  font-size: rpx;
+  color: #232627;
+}
+.content_method {
+  font-size: 22rpx;
+  color: #99A3A9;
+  
+}
+.hot {
+  margin-bottom: 30rpx;
+  ont-size: 22px;
+  color: #575E62;
+  text-align: center;
+}
+.cash {
+  font-size: 80rpx;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 48rpx;
+}
+.content button {
+  margin-bottom: 30rpx;
+  width: 670rpx;
+}
+
+.survey {
+  width: 690rpx;
+  margin: 64rpx auto 15rpx;
+}
+.survey_h1 {
+  font-size: 34rpx;
+  color: #222222;
+  margin-bottom: 25rpx;
+  display: block;
+}
+.survey_p {
+  font-size: 26rpx;
+  color: #999999;
+  display: block;
+}
+.survey_color {
+  color: #508b93;
+}
+
+.main_nav {
+  width: 690rpx;
+  height: 89rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  line-height: 89rpx;
+  margin-bottom: 1rpx;
+}
+.main_nav text {
+  display: block;
+  float: left;
+  height: 89rpx;
+}
+.main_title {
+  width: 200rpx;
+  font-size: 34rpx;
+  color: #000000;
+ 
+}
+.main_theme {
+  width:435rpx;
+  font-size: 34rpx;
+  color: #888;
+  display: block;
+  text-align: right;
+  margin-right: 30rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  }
+.main_logo {
+  font-size: 34rpx;
+  color: #C7C7CC;
+  text-align: right;
+}
+.index .service {
+  margin: 10rpx 0 0rpx;
+  position: relative;
+  display: block;
+  clear: both;
+  width:690rpx;
+height:89rpx;
+background:#fff;
+padding:0 30rpx;
+line-height:89rpx;
+
+}
+.service_1 {
+  position: absolute;
+  left: 15rpx;
+  top: 20rpx;
+}
+.service_2 {
+  position: absolute;
+  left:115rpx;
+  top: 20rpx;
+}
+.service_3 {
+  position: absolute;
+  left: 215rpx;
+  top: 20rpx;
+}
+.service_4 {
+  position: absolute;
+  left:315rpx;
+  top: 20rpx;
+}
+.service_5 {
+  position: absolute;
+  left: 415rpx;
+  top: 20rpx;
+}
+.service_6 {
+  position: absolute;
+  left:515rpx;
+  top: 20rpx;
+}
+.service_7 {
+  position: absolute;
+  left: 615rpx;
+  top: 20rpx;
+}
+.service_8 {
+  position: absolute;
+  right:0rpx;
+  top: 20rpx;
+}
+.clear {
+  width: 750rpx;
+  height: 62rpx;
+}

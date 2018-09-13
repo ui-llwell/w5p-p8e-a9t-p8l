@@ -101,22 +101,36 @@
     line-height: 88rpx;
     padding: 0 30rpx;
     background: #fff;
-    font-size: 34rpx;
+    font-size: 30rpx;
     color: #000000;
     border-bottom: 1px solid #E5E5E5;
     display: flex;
     align-items:center;
   }
   .add input {
-    flex: 1
+    flex: .7;
+    padding: 0 10rpx;
+    font-size: 30rpx;
+    color: #B2B2B2;
   }
   .add-li {
     font-family: PingFangSC-Medium;
     font-size: 28rpx;
     color: #888888;
     padding:20rpx 30rpx;
+    margin-bottom: 30rpx;
   }
   .add-li text {
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 28rpx;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 50%;
+    margin-right: 10rpx;
+  }
+  .add view {
     display: inline-block;
     width: 30rpx;
     height: 30rpx;
@@ -124,5 +138,16 @@
     text-align: center;
     border: 1px solid #888;
     border-radius: 50%;
-    margin-right: 10rpx;
+    font-size: 20rpx;
+    color: #888888;
+  }
+  .next {
+    width: 670rpx;
+    height: 97rpx;
+    line-height: 94rpx;
+    background: #1AAD19;
+    border-radius: 10rpx;
+    color: #fff;
+    display: block;
+    margin: 30rpx auto;
   }

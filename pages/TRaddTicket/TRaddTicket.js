@@ -69,7 +69,7 @@ Page({
   },
   next: function () {
     wx.navigateTo({
-      url: '../registerComplete/registerComplete',
+      url: '../TRaddTicketFinish/TRaddTicketFinish',
     })
   },
   /**

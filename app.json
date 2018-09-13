@@ -2,8 +2,22 @@
   "pages":[
 
     
-    "pages/TRaddTicket/TRaddTicket",
+
+    "pages/modifyBankcard/modifyBankcard",
+
+    "pages/modifyPassport/modifyPassport",
+    "pages/modifyPhone/modifyPhone",
+
+
+    "pages/navMine/navMine",
+
     "pages/uploadBankcard/uploadBankcard",
+
+    
+    
+    
+    "pages/TRaddTicket/TRaddTicket",
+   
     "pages/navTicketRebate/navTicketRebate",
     
     "pages/CRcoopShopDetails/CRcoopShopDetails",
@@ -15,6 +29,7 @@
     
     "pages/navHome/navHome",
 
+    
     "pages/index/index",
     
     
@@ -24,7 +39,7 @@
     "pages/uploadPassport/uploadPassport",
     
     
-    "pages/navMine/navMine",
+    
    
     
     "pages/TRcoopShopDetails/TRcoopShopDetails",
@@ -34,9 +49,9 @@
     "pages/CRrecord/CRrecord",
     "pages/TRrecord/TRrecord",
     "pages/TRrecordDetails/TRrecordDetails",
-    "pages/modifyPhone/modifyPhone",
-    "pages/modifyPassport/modifyPassport",
-    "pages/modifyBankcard/modifyBankcard",
+   
+    
+    
     
     
     "pages/test/test",

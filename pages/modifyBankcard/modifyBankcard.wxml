@@ -1,2 +1,44 @@
 <!--pages/modifyBankcard/modifyBankcard.wxml-->
-<text>pages/modifyBankcard/modifyBankcard.wxml</text>
+<!-- <text>我的银行卡</text> -->
+
+<view class='index'>
+  <view class='wrap' bindtap="chooseimage">
+    <view class='img1' wx:if="{{atempFilePaths == ''}}"></view>
+    <view class='img2'>
+      <image bindtap="chooseimage" data-status="1" class='content_passportImg'  src="{{atempFilePaths }}" catchTap="chooseImageTap" mode="aspectFit" ></image>
+    </view>
+  </view>
+  <view class='upload'>
+    请上传银行卡正面照片
+    <view class="weui-cell__ft_in-access upload_logo"></view>
+  </view>
+</view>
+<view class='bankCard'>请绑定持卡人本人的银行卡</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='iphone'>
+    <view class='iphone_left'>
+      持卡人 <input type='text' placeholder='请输入持卡人真实姓名'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      银行 <input type='text' placeholder='招商银行'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      银行支行 <input type='text' placeholder='请输入银行的支行名称'></input>
+    </view>
+  </view>
+  <view class='iphone'>
+    <view class='iphone_left'>
+      卡号 <input type='text' placeholder='请输入正确的卡号'></input>
+    </view>
+  </view>
+</form>
+
+  <view class="weui-msg__extra-area">
+    <view class="weui-footer">
+        <view class='ok'>确定</view>
+    </view>
+  </view>

@@ -1,1 +1,50 @@
 /* pages/modifyPhone/modifyPhone.wxss */
+page {
+  width: 750rpx;
+  height: 100%;
+  background: #F4F4F4;
+  }
+.iphone {
+  width: 690rpx;
+  height: 89rpx;
+  line-height: 89rpx;
+  font-size: 34rpx;
+  background: #fff;
+  margin: 0 auto 3rpx;
+  padding: 0 30rpx
+}
+.iphone_left {
+  float:  left;
+  width: 508rpx;
+  height: 89rpx;
+  
+}
+.iphone_left input {
+  width: 156px;
+  height: 89rpx;
+  display: block;
+  float: right;
+  font-size: 33rpx;
+  color: #B2B2B2;
+}
+.iphone_right {
+  float:  left;
+  width: 180rpx;
+  height: 89rpx;
+  color: #1AAD19;
+  letter-spacing: 0;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 89rpx;
+  border-left: 1px solid #F4F4F4;
+}
+.ok {
+   width: 670rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  background: #1AAD19;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
