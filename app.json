@@ -1,61 +1,38 @@
 {
   "pages":[
-
-    
-
-    "pages/modifyBankcard/modifyBankcard",
-
-    "pages/modifyPassport/modifyPassport",
-    "pages/modifyPhone/modifyPhone",
-
-
-    "pages/navMine/navMine",
-
-    "pages/uploadBankcard/uploadBankcard",
-
-    
-    
-    
-    "pages/TRaddTicket/TRaddTicket",
-   
-    "pages/navTicketRebate/navTicketRebate",
-    
-    "pages/CRcoopShopDetails/CRcoopShopDetails",
-    
-    "pages/registerComplete/registerComplete",
-   
-    "pages/cooperativeShop/cooperativeShop",
-    "pages/navConsumerRebate/navConsumerRebate",
-    
-    "pages/navHome/navHome",
-
-    
     "pages/index/index",
+    "pages/navMine/navMine",
+    "pages/navHome/navHome",
     
     
-    
+
+
+
+
+
+
     
     "pages/registerPhone/registerPhone",
-    "pages/uploadPassport/uploadPassport",
+
     
-    
-    
-   
-    
-    "pages/TRcoopShopDetails/TRcoopShopDetails",
-    "pages/TRaddAppointment/TRaddAppointment",
-    
-    "pages/TRaddTicketFinish/TRaddTicketFinish",
     "pages/CRrecord/CRrecord",
-    "pages/TRrecord/TRrecord",
-    "pages/TRrecordDetails/TRrecordDetails",
+    "pages/CRcoopShopDetails/CRcoopShopDetails",
+    
+    "pages/modifyBankcard/modifyBankcard",
+    "pages/modifyPhone/modifyPhone",
+   
+    
+    "pages/navConsumerRebate/navConsumerRebate"
    
     
     
+   
     
     
-    "pages/test/test",
-    "pages/logs/logs"
+
+
+
+
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -72,19 +49,13 @@
       { "selectedIconPath": "static/img/home_selected@3x.png",
         "iconPath": "static/img/home__normal@3x.png",
         "pagePath": "pages/navHome/navHome",
-        "text": "首页"
+        "text": "合作店铺"
       },
       { 
         "selectedIconPath": "static/img/scan_selected@3x.png",
         "iconPath": "static/img/scan__normal@3x.png",
         "pagePath": "pages/navConsumerRebate/navConsumerRebate",
-        "text": "消费返利"
-      },
-      {
-        "selectedIconPath": "static/img/receipt_selected@3x.png",
-        "iconPath": "static/img/receipt__normal@3x.png",
-        "pagePath": "pages/navTicketRebate/navTicketRebate",
-        "text": "小票返利"
+        "text": "消费二维码"
       },
       {
         "selectedIconPath": "static/img/personal_selected@3x.png",

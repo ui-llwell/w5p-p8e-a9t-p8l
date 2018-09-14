@@ -1,8 +1,0 @@
-/* pages/TRaddTicketFinish'/TRaddTicketFinish.wxss */
-
-.footer_logo {
-  display: block;
-  width:443rpx;
-  height:94rpx;
-  margin: 0 auto;
-}

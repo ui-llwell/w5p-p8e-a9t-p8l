@@ -21,52 +21,28 @@ Page({
         text3: '职业代购手把手教你淘遍首尔3>'
       },
     ],
-    List: [{
+    ConsumptionList: [{
       id: '01',
-      text1: '乐天',
-      text2: '乐天 25% 蚕室 27% Coex 27%',
-      text3: '爱宝客',
-      text4: '26%'
-    },{
-        id: '03',
-        text1: '新罗',
-        text2: '26%',
-        text3: '格乐丽雅',
-        text4: '20%'
-      }, {
-        id: '04',
-        text1: '都塔',
-        text2: '27%',
-        text3: '东和',
-        text4: '东和 27% '
-      }, {
-        id: '04',
-        text1: '新世界',
-        text2: '27%',
-        text3: '东和',
-        text4: '乐天 17.5% 新罗 17.5%  '
-      }],
-    // //是否采用衔接滑动  
-    // circular: true,
-    // //是否显示画板指示点  
-    // indicatorDots: false,
-    // //选中点的颜色  
-    // indicatorcolor: "#000",
-    // //是否竖直  
-    // vertical: false,
-    // //是否自动切换  
-    // autoplay: true,
-    // //自动切换的间隔
-    // interval: 2500,
-    // //滑动动画时长毫秒  
-    // duration: 100,
-    //所有图片的高度  
+      img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_img_rebate@3x.png',
+      name: '乐天仁川机场第一航站楼店',
+      address: '仁川市机场路1号',
+      iphone: '34123243123'
+    }, {
+      id: '02',
+      img: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_img_shop2@3x.png',
+      name: '宝堂TAKARADO',
+      address: '仁川市机场路1号',
+      iphone: '34123243123'
+    }],
+    
     autoplay: true,//是否自动切换  
     indicatorDots: true,//是否显示圆点  
     interval: 5000,//自动切换间隔  
     duration: 500, //滑动动画时长  
-    indicatorColor: "rgba(255,255,255,0.24)",//滑动圆点颜色  
-    indicatorActiveColor: "white", //当前圆点颜色  
+    //indicatorColor: "rgba(255,255,255,0.24)",//滑动圆点颜色  
+    //indicatorActiveColor: "white", //当前圆点颜色 
+    indicatorColor: "blue",//滑动圆点颜色  
+    indicatorActiveColor: "white", //当前圆点颜色
     current: 0, //当前所在页面的 index  
     circular: true,  //是否采用衔接滑动  
     imgheights: [],
@@ -96,21 +72,10 @@ Page({
     // console.log(e.detail.current)
     this.setData({ current: e.detail.current })
   },
-  consumption: function () {
-    console.log(111)
-    wx.switchTab({
-      url: '../navConsumerRebate/navConsumerRebate',
-    })
-  },
-  SmallTicket: function () {
-    console.log(222)
-    wx.switchTab({
-      url: '../navTicketRebate/navTicketRebate',
-    })
-  },
-  CooperativeShop: function(){
+  consumption: function (e) {
+    console.log(e.currentTarget.dataset.index)
     wx.navigateTo({
-      url: '../cooperativeShop/cooperativeShop',
+      url: '../CRcoopShopDetails/CRcoopShopDetails',
     })
-  }
+  },
 })

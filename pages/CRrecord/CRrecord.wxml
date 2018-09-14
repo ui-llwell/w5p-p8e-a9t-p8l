@@ -1,2 +1,90 @@
 <!--pages/CRrecord'/CRrecord.wxml-->
-<text>pages/CRrecord'/CRrecord.wxml</text>
+<!-- <text>消费返利记录</text> -->
+<view class='index'>
+  <view class="page__bd">
+    <view class="weui-tab">
+        <view class="weui-navbar">
+            <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                    <view class="weui-navbar__title">{{item}}</view>
+                </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+              <view class='content'>
+                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                    <view class='h1'>
+                      <view class='time f1'>1{{item.time}}</view>
+                      <view class='putForward r1'>{{item.putForward}}</view>
+                    </view>
+                    <view class='h2'>{{item.money}}</view>
+                    <view class='h2'>{{item.retrurn}}</view>
+                    <view class='h2'>{{item.rebate}}</view>
+                    <view class='h2'>{{item.address}}</view>
+                    <view class='h2'>{{item.earliestTime}}</view>
+                  </view>
+                  <view class='total'>
+                    <view>共3条记录</view>
+                    <view>消费金额总计：₩ 11000.00</view>
+                    <view>已返利总计：₩ 330.00</view>
+                  </view>
+                </view>
+
+
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                
+                <view class='content'>
+                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                    <view class='h1'>
+                      <view class='time f1'>2{{item.time}}</view>
+                      <view class='putForward r1'>{{item.putForward}}</view>
+                    </view>
+                    <view class='h2'>{{item.money}}</view>
+                    <view class='h2'>{{item.retrurn}}</view>
+                    <view class='h2'>{{item.rebate}}</view>
+                    <view class='h2'>{{item.address}}</view>
+                    <view class='h2'>{{item.earliestTime}}</view>
+                  </view>
+                  <view class='total'>
+                    <view>共3条记录</view>
+                    <view>消费金额总计：₩ 11000.00</view>
+                    <view>已返利总计：₩ 330.00</view>
+                  </view>
+                </view>
+
+
+
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+
+                <view class='content'>
+                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                    <view class='h1'>
+                      <view class='time f1'>3{{item.time}}</view>
+                      <view class='putForward r1'>{{item.putForward}}</view>
+                    </view>
+                    <view class='h2'>{{item.money}}</view>
+                    <view class='h2'>{{item.retrurn}}</view>
+                    <view class='h2'>{{item.rebate}}</view>
+                    <view class='h2'>{{item.address}}</view>
+                    <view class='h2'>{{item.earliestTime}}</view>
+                  </view>
+                  <view class='total'>
+                    <view>共3条记录</view>
+                    <view>消费金额总计：₩ 11000.00</view>
+                    <view>已返利总计：₩ 330.00</view>
+                  </view>
+                </view>
+
+
+
+            </view>
+        </view>
+    </view>
+  </view>
+  
+</view>

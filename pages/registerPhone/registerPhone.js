@@ -8,6 +8,12 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  next: function(){
+    console.log(111)
+    wx.switchTab({
+      url: '../navHome/navHome'
+    })
+  },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -48,11 +54,6 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
-    })
-  },
-  next: function(){
-    wx.navigateTo({
-      url: '../uploadPassport/uploadPassport',
     })
   }
 })

@@ -15,31 +15,22 @@
       </block>
     </swiper>
   </view>
-  <view class='index'>
-    <view class='main'>
-      <view class='f1 main_consumption' ><image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/top_img_consumption@3x.png' bindtap='consumption'></image></view>
-      <view class='r1 main_SmallTicket'><image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/top_img_receipt@3x.png' bindtap='SmallTicket'></image></view>
-    </view>
-
-    <view class='nav'>
-      <view class='nav_text'>
-        <text class='nav_ReturnPoint'>流连合作免税店最新返点</text>
-        <text class='nav_time'>2018.9.01</text>
+  
+  <view class='consumption'>
+    <view class='consumption_wrap' wx:for='{{ConsumptionList}}' wx:key='{{index}}' data-index='{{index}}' bindtap='consumption'>
+      <view class='consumption_wrap_Black'></view>
+      <view class='consumption_wrapImg' >
+        <image src='{{item.img}}'></image>
       </view>
-    </view>
-    <view class='table' wx:for='{{List}}' wx:key="{{id}}">
-      <view class='table_left f1'>
-        <text class='table_leftText1'>{{item.text1}}</text>
-        <text class='table_leftText2'>{{item.text2}}</text>
+      <view class='consumption_wrapName'>
+        {{item.name}}
       </view>
-      <view class='table_right r1'>
-        <text class='table_rightText1'>{{item.text3}}</text>
-        <text class='table_rightText2'>{{item.text4}}</text>
+      <view class='consumption_wrapAddress'>
+        <view> 地址：{{item.address}}</view>
       </view>
-    </view>
-    <view class='footer'>
-      <text class='footer_wcome'>WELCOME</text>
-      <text class='footer_link' bindtap='CooperativeShop'>查看合作店铺	></text>
+      <view class='consumption_wrapIphone'>
+        <view>联系电话：{{item.iphone}}</view>
+      </view>
     </view>
     
   </view>
