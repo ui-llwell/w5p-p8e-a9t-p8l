@@ -15,7 +15,7 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
 
               <view class='content'>
-                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                  <view class='main' wx:for="{{All.List}}" wx:key='{{id}}'>
                     <view class='h1'>
                       <view class='time f1'>1{{item.time}}</view>
                       <view class='putForward r1'>{{item.putForward}}</view>
@@ -27,9 +27,9 @@
                     <view class='h2'>{{item.earliestTime}}</view>
                   </view>
                   <view class='total'>
-                    <view>共3条记录</view>
-                    <view>消费金额总计：₩ 11000.00</view>
-                    <view>已返利总计：₩ 330.00</view>
+                    <view>共{{All.record.num}}条记录</view>
+                    <view>消费金额总计：₩ {{All.record.consumption}}</view>
+                    <view>已返利总计：₩ {{All.record.rebate}}</view>
                   </view>
                 </view>
 
@@ -38,7 +38,7 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                 
                 <view class='content'>
-                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                  <view class='main' wx:for="{{All.List}}" wx:key='{{id}}'>
                     <view class='h1'>
                       <view class='time f1'>2{{item.time}}</view>
                       <view class='putForward r1'>{{item.putForward}}</view>
@@ -50,9 +50,9 @@
                     <view class='h2'>{{item.earliestTime}}</view>
                   </view>
                   <view class='total'>
-                    <view>共3条记录</view>
-                    <view>消费金额总计：₩ 11000.00</view>
-                    <view>已返利总计：₩ 330.00</view>
+                    <view>共{{All.record.num}}条记录</view>
+                    <view>消费金额总计：₩ {{All.record.consumption}}</view>
+                    <view>已返利总计：₩ {{All.record.rebate}}</view>
                   </view>
                 </view>
 
@@ -62,7 +62,7 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
 
                 <view class='content'>
-                  <view class='main' wx:for="{{List}}" wx:key='{{id}}'>
+                  <view class='main' wx:for="{{All.List}}" wx:key='{{id}}'>
                     <view class='h1'>
                       <view class='time f1'>3{{item.time}}</view>
                       <view class='putForward r1'>{{item.putForward}}</view>
@@ -74,9 +74,9 @@
                     <view class='h2'>{{item.earliestTime}}</view>
                   </view>
                   <view class='total'>
-                    <view>共3条记录</view>
-                    <view>消费金额总计：₩ 11000.00</view>
-                    <view>已返利总计：₩ 330.00</view>
+                    <view>共{{All.record.num}}条记录</view>
+                    <view>消费金额总计：₩ {{All.record.consumption}}</view>
+                    <view>已返利总计：₩ {{All.record.rebate}}</view>
                   </view>
                 </view>
 

@@ -1,23 +1,31 @@
 {
   "pages":[
+   
+    "pages/modifyBankcard/modifyBankcard",
     "pages/index/index",
+    
+    "pages/navMine/navMine",
+    "pages/CRrecord/CRrecord",
+    
+    "pages/navConsumerRebate/navConsumerRebate",
+    
     
     "pages/navHome/navHome",
     "pages/registerPhone/registerPhone",
 
     
     "pages/CRcoopShopDetails/CRcoopShopDetails",
-    "pages/navMine/navMine",
-    "pages/modifyPhone/modifyPhone",
+    
+    "pages/modifyPhone/modifyPhone"
     
     
     
     
-    "pages/navConsumerRebate/navConsumerRebate",
     
-    "pages/CRrecord/CRrecord",
+    
+    
 
-    "pages/modifyBankcard/modifyBankcard"
+    
     
    
     
