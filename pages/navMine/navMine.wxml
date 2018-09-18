@@ -6,7 +6,7 @@
     <view class='header_background'></view>
     <view class="container">
         <view class="userinfo">
-          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" > 获取头像昵称 </button>
           <block wx:else>
             <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -20,34 +20,34 @@
     <view class='content_all'>
       <view class='content_left' bindtap='consumptionfunction'  >
         <navigator class='looks-view' url="/pages/CRrecord/CRrecord?num=0">
-        <text class='content_num'>3</text>
+        <text class='content_num'>{{handle}}</text>
         <text class='content_method'>处理中</text>
         </navigator>
       </view>
       <view class='content_center'>
       <navigator class='looks-view' url="/pages/CRrecord/CRrecord?num=1">
-        <text class='content_num'>2</text>
+        <text class='content_num'>{{putForward}}</text>
         <text class='content_method'>可提现</text>
       </navigator>
       </view>
       <view class='content_right'>
       <navigator class='looks-view' url="/pages/CRrecord/CRrecord?num=2">
-        <text class='content_num'>1</text>
+        <text class='content_num'>{{complete}}</text>
         <text class='content_method'>已完成</text>
       </navigator>
       </view>
     </view>
-    <view class='hot' type="default" type="default" bindtap="openConfirm">可申请提现金额</view>
+    <view class='hot' type="default" type="default" bindtap="openConfirm" >可申请提现金额</view>
     <view class='cash'>₩ <text>{{money}}</text></view>
-    <button   bindtap="setModalStatus" data-status="1">申请现场提现</button>
-    <button>申请银行卡提现</button>
+    <button   bindtap="setModalStatus" data-status="1" disabled="{{disabled}}">申请现场提现</button>
+    <button  bindtap='qa' disabled="{{disabled}}">申请银行卡提现</button>
   </view>
   
 
     <view class='main'>
       <view class='main_nav' bindtap='iphone'>
         <text class='main_title'>我的手机号</text>
-        <text class='main_theme'>17601620130</text>
+        <text class='main_theme'>{{myphone}}</text>
         <text class='main_logo weui-cell__ft weui-cell__ft_in-access'></text>
       </view>
       <view class='main_nav' bindtap='card'>
@@ -67,6 +67,13 @@
       <contact-button class='service_6' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
       <contact-button class='service_7' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
       <contact-button class='service_8' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_9' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_10' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_11' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_12' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_13' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_14' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
+      <contact-button class='service_15' style='opacity:0' size="27" session-from="weapp" type="default-dark" ></contact-button>
       <text class='main_title'>联系客服</text>
       <text class='main_theme'></text>
       <text class='main_logo weui-cell__ft weui-cell__ft_in-access'></text>

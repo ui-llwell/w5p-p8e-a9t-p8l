@@ -1,42 +1,31 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/navMine/navMine",
+    
     "pages/navHome/navHome",
-    
-    
-
-
-
-
-
-
-    
     "pages/registerPhone/registerPhone",
 
     
-    "pages/CRrecord/CRrecord",
     "pages/CRcoopShopDetails/CRcoopShopDetails",
-    
-    "pages/modifyBankcard/modifyBankcard",
+    "pages/navMine/navMine",
     "pages/modifyPhone/modifyPhone",
+    
+    
+    
+    
+    "pages/navConsumerRebate/navConsumerRebate",
+    
+    "pages/CRrecord/CRrecord",
+
+    "pages/modifyBankcard/modifyBankcard"
+    
    
     
-    "pages/navConsumerRebate/navConsumerRebate"
-   
-    
-    
-   
-    
-    
-
-
-
 
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#F5F5F5",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },

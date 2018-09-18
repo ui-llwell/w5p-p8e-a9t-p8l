@@ -4,17 +4,17 @@
 <view class='index'>
   <view class='header'>
     <view class='img'>
-      <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_img_rebate@3x.png'></image>
+      <image src='{{All.content.img}}'></image>
     </view>
     <view class='text'>
-      <text class='h1'>Takarado宝堂</text>
-      <text class='h2'>TAKARADO宝堂  是专注于为海淘达人们提供全球O2O跨境商品的旺铺。我们以“专注、专业、高效”为原则，严选全球的精致品牌商品，提供“品牌多、规格全、品类丰富”的100%跨境正品。</text>
-      <view class='h3'>地址：仁川市机场路3号 <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_location@3x.png'></image></view>
-      <view class='h4'>联系电话：34123243123 <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_phone@3x.png'></image></view>
+      <text class='h1'>{{All.content.title}}</text>
+      <text class='h2'>{{All.content.p}}</text>
+      <view class='h3'>地址：{{All.content.address}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_location@3x.png'></image></view>
+      <view class='h4'>联系电话：{{All.content.tel}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_phone@3x.png'></image></view>
     </view>
   </view>
   <view class='content'>
-    <view class='content_wrap' wx:for='{{List}}' data-index='{{index}}' key='{{index}}'>
+    <view class='content_wrap' wx:for='{{All.list}}' data-index='{{index}}' wx:key='id'>
       <view class='content_wrapLeft'>
         <image src='{{item.logo}}'></image>
       </view>

@@ -172,39 +172,76 @@ line-height:89rpx;
 }
 .service_2 {
   position: absolute;
-  left:115rpx;
+  left:71rpx;
   top: 20rpx;
 }
 .service_3 {
   position: absolute;
-  left: 215rpx;
+  left: 128rpx;
   top: 20rpx;
 }
 .service_4 {
   position: absolute;
-  left:315rpx;
+  left:178rpx;
   top: 20rpx;
 }
 .service_5 {
   position: absolute;
-  left: 415rpx;
+  left: 328rpx;
   top: 20rpx;
 }
 .service_6 {
   position: absolute;
-  left:515rpx;
+  left:228rpx;
   top: 20rpx;
 }
 .service_7 {
   position: absolute;
-  left: 615rpx;
+  left: 278rpx;
   top: 20rpx;
 }
 .service_8 {
   position: absolute;
-  right:0rpx;
+  right:378rpx;
   top: 20rpx;
 }
+.service_9 {
+  position: absolute;
+  left:428rpx;
+  top: 20rpx;
+}
+.service_10 {
+  position: absolute;
+  left:478rpx;
+  top: 20rpx;
+}
+.service_11 {
+  position: absolute;
+  left:528rpx;
+  top: 20rpx;
+}
+.service_12 {
+  position: absolute;
+  left:578rpx;
+  top: 20rpx;
+}
+.service_13 {
+  position: absolute;
+  left:628rpx;
+  top: 20rpx;
+}
+.service_14 {
+  position: absolute;
+  left:378rpx;
+  top: 20rpx;
+}
+.service_15 {
+  position: absolute;
+  right: 0rpx;
+  top: 20rpx;
+}
+
+
 .clear {
   width: 750rpx;
   height: 62rpx;

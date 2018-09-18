@@ -3,15 +3,26 @@
 .center{
     text-align: center;
 }
-.page {
+page {
+  position: relative;
   width: 750rpx;
   height: 100%;
-  overflow: hidden;
   background: #F5F5F5;
+}
+.page {
+  width: 750rpx;
+  height: 1150rpx;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: -50rpx;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 .container {
   width: 750rpx;
-  height: 100%;
+  /* height: 100%; */
   
 }
 .userinfo {
@@ -36,6 +47,9 @@
   margin-top: 36rpx;
   margin-bottom: 70rpx;
 }
+.content {
+  text-align: center;
+}
 .content_iphone {
   width: 460rpx;
   height: 80rpx;
@@ -45,6 +59,7 @@
   font-size: 34rpx;
   border-bottom: 1px solid #CED7DB;
   margin-bottom: 26rpx;
+  
 }
 .content_VerificationCode {
   width: 460rpx;
@@ -56,12 +71,22 @@
   border-bottom: 1px solid #CED7DB;
   margin-bottom: 88rpx;
 }
-.content_obtain {
+.page .content_obtain {
   font-size: 24rpx;
   color: #0095FF;
   text-align: center;
   margin-bottom: 68rpx;
+  background:#F5F5F5;
+  border-bottom: 5rpx solid #F5F5F5;
+  width: 200rpx;
+  background: none;
+  
 }
+button::after{ 
+  border: none;
+  
+  color: #fff;
+ } 
 .content_next {
   width: 404rpx;
   height: 106rpx;
