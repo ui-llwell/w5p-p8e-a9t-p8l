@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "海外合作店铺",
+  "navigationBarTitleText": "注册代购",
   
   "usingComponents": {
     "i-grid": "../../iview/grid/index",

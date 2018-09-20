@@ -8,19 +8,33 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     text: '获取验证码', //按钮文字
-    currentTime: 61, //倒计时
-    disabled: false, //按钮是否禁用
-    phone: '', //获取到的手机栏中的值，,
-    no:'false'
-  },
-  next: function(){
-    console.log(111)
-    wx.switchTab({
-      url: '../navHome/navHome'
-    })
+    currentTime: 60, //倒计时
+    disabled: false, //倒计时按钮是否禁用
+    phone: '', //手机号
+    seccode:'', //验证码
+    
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    app.Ajax(
+      // 方法组名称为：User（代购用户），不是系统通用用户Users
+      'Users',
+      'POST',
+      'UserReg',
+      { checkCode: this.data.seccode, phone: this.data.phone, agentcode:wx.getStorageSync('agentcode'), ...app.globalData.userInfo },
+      function (json) {
+        // console.log('json',json);
+        if (json.success) {
+
+        }else{
+
+        }
+      }
+    )
+
+    wx.switchTab({
+      url: '../navHome/navHome'
+    })
   },
   //事件处理函数
   // bindViewTap: function () {
@@ -29,6 +43,7 @@ Page({
   //   })
   // },
   onLoad: function () {
+    console.log('app.globalData.userInfo', app.globalData.userInfo)
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -70,89 +85,86 @@ Page({
       phone: e.detail.value
     })
   },
-
-
-  //获取验证码按钮
-  bindButtonTap: function () {
-    var that = this;
-
-    that.setData({
-      disabled: true, //只要点击了按钮就让按钮禁用 （避免正常情况下多次触发定时器事件）
-      color: '#ccc',
+  seccodeInput:function(e){
+    this.setData({
+      seccode: e.detail.value
     })
-
-    var phone = that.data.phone;
-    var currentTime = that.data.currentTime //把手机号跟倒计时值变例成js值
-
-    var warn = null; //warn为当手机号为空或格式不正确时提示用户的文字，默认为空
-
-    if (phone == '') {
-        warn = "号码不能为空";
-        
-
-      this.setData({
-        no: true,
-      })
+  },
+  phoneInputblur:function(e){
+    console.log(e.detail)
+    var phone = e.detail.value;
+    var toastContent;
+    if (e.detail.value == '') {
+      wx.showToast({
+        title: '号码不能为空',
+        icon: 'none',
+        duration: 2000,
+      });
     } else if (phone.trim().length != 11 || !/^1[3|4|5|6|7|8|9]\d{9}$/.test(phone)) {
-      warn = "手机号格式不正确";
-      
-      this.setData({
-        no: true,
-      })
-    } else {
-      //当手机号正确的时候提示用户短信验证码已经发送
       wx.showToast({
-        title: '短信验证码已发送',
+        title: '手机号格式不正确',
+        icon: 'none',
+        duration: 2000,
+      });
+    } 
+  },
+ 
+  // 获取验证码
+  bindButtonTap:function(){
+    const that =this;
+    if (this.data.phone==''){
+      wx.showToast({
+        title: '请输入手机号',
         icon: 'none',
         duration: 2000
       });
-
-      this.setData({
-        no: false,
-      })
-
-      //设置一分钟的倒计时
-      var interval = setInterval(function () {
-        currentTime--; //每执行一次让倒计时秒数减一
-        that.setData({
-          text: currentTime + 's', //按钮文字变成倒计时对应秒数
-
-        })
-        //如果当秒数小于等于0时 停止计时器 且按钮文字变成重新发送 且按钮变成可用状态 倒计时的秒数也要恢复成默认秒数 即让获取验证码的按钮恢复到初始化状态只改变按钮文字
-        if (currentTime <= 0) {
-          clearInterval(interval)
-          that.setData({
-            text: '重新发送',
-            currentTime: 61,
-            disabled: false,
-            // color: '#929fff'
-          })
+    }else{
+      app.Ajax(
+        'Users',
+        'POST',
+        'CheckCode',
+          { phone: this.data.phone},
+        function (json) {
+          console.log('json',json);
+          if (json.success) {
+            wx.showToast({
+              title: '短信验证码已发送',
+              icon: 'none',
+              duration: 2000
+            });
+            that.countDown();
+            that.setData({
+              disabled: true,
+            })
+          }else{
+            wx.showToast({
+              title: json.msg.msg,
+              icon: 'none',
+              duration: 2500
+            });
+          }
         }
-      }, 100);
-
-    };
-
-    //判断 当提示错误信息文字不为空 即手机号输入有问题时提示用户错误信息 并且提示完之后一定要让按钮为可用状态 因为点击按钮时设置了只要点击了按钮就让按钮禁用的情况
-    if (warn != null) {
-      // wx.showModal({
-      //   title: '提示',
-      //   content: warn
-      // })
-
-      wx.showToast({
-        title: warn,
-        icon: 'none',
-        duration: 2000
-      });
-
-
+      )
+    }
+    
+  },
+  countDown:function(){
+    const that = this;
+    var currentTime = this.data.currentTime;
+    if (currentTime > 0){
+      var timer = setInterval(function(){
+        currentTime--;
+        that.setData({
+          text: currentTime + 's',
+        })
+      },1000)
+    }else{
+      clearTimeout(timer);
       that.setData({
+        text: '重新发送',
+        currentTime: 60,
         disabled: false,
-        //color: '#929fff'
       })
-      return;
-
-    };
+    }
   }
-  
 })

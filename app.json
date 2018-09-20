@@ -1,9 +1,10 @@
 {
   "pages":[
+
    
-    "pages/modifyBankcard/modifyBankcard",
-    "pages/index/index",
     
+    "pages/index/index",
+    "pages/modifyBankcard/modifyBankcard",
     "pages/navMine/navMine",
     "pages/CRrecord/CRrecord",
     
@@ -11,8 +12,9 @@
     
     
     "pages/navHome/navHome",
-    "pages/registerPhone/registerPhone",
 
+    "pages/registerPhone/registerPhone",
+    
     
     "pages/CRcoopShopDetails/CRcoopShopDetails",
     
