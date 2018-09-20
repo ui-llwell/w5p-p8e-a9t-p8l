@@ -1,5 +1,6 @@
 {
   "pages":[
+
     "pages/receivablesBusiness/receivablesBusiness",
     "pages/collectionDetails/collectionDetails",
     "pages/paymentBusiness/paymentBusiness",
@@ -7,7 +8,10 @@
    
    "pages/registeredSalesperson/registeredSalesperson",
     
-    
+
+
+   
+
     
 
 
@@ -22,6 +26,7 @@
     "pages/modifyBankcard/modifyBankcard",
     
     
+
     "pages/navMine/navMine",
     
     "pages/registerPhone/registerPhone",
@@ -30,6 +35,8 @@
     "pages/navHome/navHome"
     
 
+
+    
     
     
     

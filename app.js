@@ -8,16 +8,56 @@ T.setLocaleByIndex(wx.getStorageSync('langIndex') || 0);
 wx.T = T
 
 App({
-  onLaunch: function () {
+  onLaunch: function (options) {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    
+    var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
+    if (!isDebug) {
+      //远程域名
+      wx.setStorageSync('domainName', "https://wxapp.llwell.net/api/PG/")
+    }
+    else {
+      //本地测试域名
+      wx.setStorageSync('domainName', "http://192.168.0.11:55734/api/PG/")
+    }
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        this.Ajax(
+          'Open',
+          'POST',
+          'UserLogin',
+          { code: res.code },
+          function (json) {
+            // console.log('~~~',json);
+            if (json.success) {
+              wx.setStorageSync('token', json.data.token);
+              // console.log(json.data.token);
+              if (json.data.isReg) {
+                wx.switchTab({
+                  url: '../navHome/navHome',
+                })
+              } else {
+                // console.log(options);
+                if (options.query.agentcode === undefined) {
+                  wx.setStorageSync('agentcode', '999999')
+                }else{
+                  wx.setStorageSync('agentcode', options.query.agentcode)
+                }
+                wx.navigateTo({
+                  url: '../index/index'
+                })
+              }
+            }else{
+              wx.showToast({
+                title: json.msg.msg,
+                icon: 'none',
+                duration: 2500
+              })
+            }
+          }
+        )
       }
     })
     // 获取用户信息
@@ -43,5 +83,37 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+
+  Ajax: function (url, type, method, data, callback) {
+    // wx.showLoading({
+    //   title: 'loading',
+    //   duration:1000,
+    // });
+    
+    var send = {
+      token: wx.getStorageSync('token'),
+      method: method,
+      param: data,
+    };
+    wx.request({
+      url: wx.getStorageSync('domainName') + url,
+      data: send,
+      method: type, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        'content-type': 'application/json' // 默认值
+      }, // 设置请求的 header
+      success: function (res) {
+        // 发送请求成功执行的函数
+        if (typeof callback === 'function') {
+          callback(res.data);
+        }
+      },
+      fail: function (res) {
+      },
+      complete: function () {
+        // wx.hideLoading();
+      }
+    })
   }
 })

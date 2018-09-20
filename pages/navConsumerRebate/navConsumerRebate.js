@@ -1,4 +1,8 @@
-// // pages/navConsumerRebate/navConsumerRebate.js
+
+// pages/navConsumerRebate/navConsumerRebate.js
+var QRCode = require('../../utils/weapp-qrcode.js')
+var qrcode;
+
 
 //获取应用实例
 const app = getApp()
