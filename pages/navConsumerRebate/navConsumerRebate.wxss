@@ -34,3 +34,7 @@ background-color:rgba(0,0,0,.7);
   display: block;
   
 }
+.share {
+  width: 670rpx;
+  height: 94rpx;
+}

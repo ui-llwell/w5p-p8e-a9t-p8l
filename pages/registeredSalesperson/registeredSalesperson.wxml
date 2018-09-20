@@ -1,0 +1,18 @@
+<!--pages/registeredSalesperson/registeredSalesperson.wxml-->
+<!-- <text>注册业务员</text> -->
+
+<view class='registeredSalesperson'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='hot'>注册成为流连业务员</view>
+    <view class='nav'>
+      <text class='nav_text'>业务员</text>
+      <input value='{{num}}' name='num' class='nav_input' type='number' bindinput="userNumInput" placeholder='请输入业务员编号'></input>
+    </view>
+    <view class='service'>
+      <image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/article_icon_service@3x.png'></image>
+      <contact-button class='service_click' size="27" session-from="weapp" type="default-dark" style='opacity:0'></contact-button>
+    </view>
+    
+    <button formType="submit" disabled="{{num == ''}}"  class='button' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >我要注册成为流连合作代购</button>
+  </form>
+</view>

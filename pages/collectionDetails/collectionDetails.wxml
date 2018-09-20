@@ -1,0 +1,23 @@
+<!--pages/collectionDetails/collectionDetails.wxml-->
+<!-- <text>详情页</text> -->
+
+<view class='collectionDetails'>
+
+  <view class='header'>韩国东大门3号店-待收款</view>
+  <view class='content' wx:for="{{All.detailsList}}" wx:key="{{id}}">
+    <view class='content_time'>{{item.tiem}}</view>
+    <view class='content_nav'>消费金额：₩ {{item.money}}</view>
+    <view class='content_nav'> 返点率：{{item.returnPoint}}，</view>
+    <view class='content_nav'>预计收款：₩ {{item.receivables}}</view>
+  </view>
+  <view class='total'>
+    <view class='total_title'>共{{All.total.strip}}条记录</view>
+    <view class='total_title'>消费金额总计：₩ {{All.total.money}}</view>
+    <view class='total_title'>预计收款总计：₩ {{All.total.receivables}}</view>
+    <view class='total_title'>收款时间：₩ {{All.total.time}}</view>
+  </view>
+  <view class='footer' wx:if="{{isshow == 1}}">
+    <button class='but'  bindtap="toSweepOrder">扫码收款</button>
+  </view>
+
+</view>
