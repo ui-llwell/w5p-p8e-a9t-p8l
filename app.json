@@ -1,19 +1,14 @@
 {
   "pages":[
 
-    "pages/receivablesBusiness/receivablesBusiness",
-    "pages/collectionDetails/collectionDetails",
-    "pages/paymentBusiness/paymentBusiness",
-    
    
-   "pages/registeredSalesperson/registeredSalesperson",
     
 
 
    
 
     
-
+"pages/index/index",
 
 
     "pages/navConsumerRebate/navConsumerRebate",
@@ -22,36 +17,27 @@
 
     "pages/CRcoopShopDetails/CRcoopShopDetails",
     "pages/CRrecord/CRrecord",
-    "pages/index/index",
+    
     "pages/modifyBankcard/modifyBankcard",
     
-    
+  
 
     "pages/navMine/navMine",
-    
     "pages/registerPhone/registerPhone",
-    
-    
-    "pages/navHome/navHome"
+    "pages/navHome/navHome",
     
 
 
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     
     
-   
+    "pages/receivablesBusiness/receivablesBusiness",
+    "pages/collectionDetails/collectionDetails",
+    "pages/paymentBusiness/paymentBusiness",
+    "pages/registeredSalesperson/registeredSalesperson"
     
 
   ],

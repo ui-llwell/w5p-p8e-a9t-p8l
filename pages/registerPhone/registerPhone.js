@@ -21,20 +21,20 @@ Page({
       'Users',
       'POST',
       'UserReg',
-      { checkCode: this.data.seccode, phone: this.data.phone, agentcode:wx.getStorageSync('agentcode'), ...app.globalData.userInfo },
+      { checkCode: this.data.seccode, phone: this.data.phone, agentCode:wx.getStorageSync('agentCode'),userType:wx.getStorageSync('userType'), ...app.globalData.userInfo },
       function (json) {
         // console.log('json',json);
         if (json.success) {
-
+          wx.switchTab({
+            url: '../navHome/navHome'
+          })
         }else{
 
         }
       }
     )
 
-    wx.switchTab({
-      url: '../navHome/navHome'
-    })
+    
   },
   //事件处理函数
   // bindViewTap: function () {
@@ -151,20 +151,22 @@ Page({
   countDown:function(){
     const that = this;
     var currentTime = this.data.currentTime;
-    if (currentTime > 0){
-      var timer = setInterval(function(){
-        currentTime--;
+    var timer = setInterval(function () {
+      if (currentTime > 0){
+        
+          currentTime--;
+          that.setData({
+            text: currentTime + 's',
+          })
+        
+      }else{
+        clearTimeout(timer);
         that.setData({
-          text: currentTime + 's',
+          text: '重新发送',
+          currentTime: 60,
+          disabled: false,
         })
-      },1000)
-    }else{
-      clearTimeout(timer);
-      that.setData({
-        text: '重新发送',
-        currentTime: 60,
-        disabled: false,
-      })
-    }
+      }
+    }, 1000)
   }
 })

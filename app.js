@@ -11,7 +11,7 @@ App({
   onLaunch: function (options) {
     // 展示本地存储能力
     
-    var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
+    var isDebug = true;//true调试状态使用本地服务器，非调试状态使用远程服务器
     if (!isDebug) {
       //远程域名
       wx.setStorageSync('domainName', "https://wxapp.llwell.net/api/PG/")
@@ -34,20 +34,34 @@ App({
             if (json.success) {
               wx.setStorageSync('token', json.data.token);
               // console.log(json.data.token);
+              
+
               if (json.data.isReg) {
+                wx.setStorageSync('userType', json.data.userType)
+
+
                 wx.switchTab({
                   url: '../navHome/navHome',
                 })
               } else {
-                // console.log(options);
-                if (options.query.agentcode === undefined) {
-                  wx.setStorageSync('agentcode', '999999')
+                if (options.query.regAgentCode !== undefined) {
+                  wx.setStorageSync('userType', '1')
+                  wx.setStorageSync('agentCode', options.query.regAgentCode)
                 }else{
-                  wx.setStorageSync('agentcode', options.query.agentcode)
+                  if (options.query.agentCode === undefined) {
+
+                    wx.setStorageSync('agentCode', '999999')
+                  } else {
+                    wx.setStorageSync('agentCode', options.query.agentCode)
+                  }
+                  wx.setStorageSync('userType', 0)
                 }
-                wx.navigateTo({
-                  url: '../index/index'
-                })
+                // console.log(options);
+                
+                
+                // wx.navigateTo({
+                //   url: '../index/index'
+                // })
               }
             }else{
               wx.showToast({
