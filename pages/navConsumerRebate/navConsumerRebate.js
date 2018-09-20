@@ -37,6 +37,32 @@ Page({
   onLoad: function () {
     wx.showShareMenu({
       withShareTicket: true
-    })
+    });
+    
   },
+  onShow: function () {
+    wx.connectSocket({
+      url: 'ws://localhost:54286/api/PG/ws'
+    })
+
+    wx.onSocketOpen(function (res) {
+      wx.sendSocketMessage({
+        data: 'getPayState:' + '1BD20D8049BF0C9F6A24AB2716FE2873'
+      })
+    })
+
+    wx.onSocketMessage(function (res) {
+      console.log(res);
+    })
+
+    
+  },
+  onHide: function () {
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭！')
+    })
+    wx.closeSocket(function (rea) {
+      console.log(rea)
+    })
+  }
 })
