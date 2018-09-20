@@ -1,10 +1,11 @@
 {
   "pages":[
-    "pages/index/index",
     
-    "pages/navHome/navHome",
+    
+    "pages/index/index",
     "pages/registerPhone/registerPhone",
-
+    "pages/navHome/navHome",
+    
     
     "pages/CRcoopShopDetails/CRcoopShopDetails",
     "pages/navMine/navMine",

@@ -1,4 +1,7 @@
 // pages/navConsumerRebate/navConsumerRebate.js
+var QRCode = require('../../utils/weapp-qrcode.js')
+var qrcode;
+const app =getApp();
 Page({
 
   /**

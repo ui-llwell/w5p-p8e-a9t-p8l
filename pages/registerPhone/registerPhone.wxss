@@ -1,5 +1,4 @@
 /* pages/registerPhone/registerPhone.wxss */
-/**index.wxss**/
 .center{
     text-align: center;
 }
@@ -72,7 +71,7 @@ page {
   margin-bottom: 88rpx;
 }
 .page .content_obtain {
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #0095FF;
   text-align: center;
   margin-bottom: 68rpx;

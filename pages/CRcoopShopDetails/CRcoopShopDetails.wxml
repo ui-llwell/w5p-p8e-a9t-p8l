@@ -4,26 +4,26 @@
 <view class='index'>
   <view class='header'>
     <view class='img'>
-      <image src='{{All.content.img}}'></image>
+      <image src='{{All.shopInfoImg}}'></image>
     </view>
     <view class='text'>
-      <text class='h1'>{{All.content.title}}</text>
-      <text class='h2'>{{All.content.p}}</text>
-      <view class='h3'>地址：{{All.content.address}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_location@3x.png'></image></view>
-      <view class='h4'>联系电话：{{All.content.tel}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_phone@3x.png'></image></view>
+      <text class='h1'>{{All.shopName}} - 返点率{{All.userRate}}</text>
+      <text class='h2'>{{All.shopDesc}}</text>
+      <view class='h3'>地址：{{All.shopAddr}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_location@3x.png'></image></view>
+      <view class='h4'>联系电话：{{All.shopPhone}}<image src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_phone@3x.png'></image></view>
     </view>
   </view>
   <view class='content'>
-    <view class='content_wrap' wx:for='{{All.list}}' data-index='{{index}}' wx:key='id'>
+    <view class='content_wrap' wx:for='{{All.brandsList}}' data-index='{{index}}' wx:key='id'>
       <view class='content_wrapLeft'>
-        <image src='{{item.logo}}'></image>
+        <image src='{{item.brandsImg}}'></image>
       </view>
       <view class='content_wrapCenter'>
-        <text class='content_brand'>{{item.name}}</text>
-        <text class='content_num'>{{item.num}}个商品</text>
+        <text class='content_brand'>{{item.brandsName}}</text>
+        <text class='content_num'>{{item.goodsNum}}个商品</text>
       </view>
       <view class='content_wrapRight'>
-          <view><image src='{{item.hand}}'></image>{{item.recommend}}</view>
+          <view><image src="{{item.recommend==1?'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_recommend@3x.png':'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_hot@3x'}}"></image>{{item.recommend==1?'掌柜推荐':'热销品牌'}}</view>
       </view>
     </view>
   </view>

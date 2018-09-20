@@ -68,7 +68,7 @@
 }
 .consumption_wrapName {
   width: 640rpx;
-  height: 50rpx;
+  /* height: 50rpx; */
   position: absolute;
   left: 21rpx;
   top:21rpx;
