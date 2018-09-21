@@ -11,7 +11,7 @@ App({
   onLaunch: function (options) {
     // 展示本地存储能力
     
-    var isDebug = true;//true调试状态使用本地服务器，非调试状态使用远程服务器
+    var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
     if (!isDebug) {
       //远程域名
       wx.setStorageSync('domainName', "https://wxapp.llwell.net/api/PG/")

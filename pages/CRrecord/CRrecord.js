@@ -1,46 +1,15 @@
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
+const app = getApp()
 Page({
   data: {
+    getData: {},
     tabs: ["处理中", "可提现", "已提现"],
+    payState:['未申请','已申请','已提现'],
+    noRecord:'您还没有相关记录哦',
     activeIndex: '',
     sliderOffset: 0,
     sliderLeft: 0,
-    All: {
-      List: [{
-        id: '01',
-        time: '2018-08-10  9：00',
-        putForward: '未申请提现',
-        money: '消费金额：10000.00',
-        retrurn: '返点率：3%',
-        rebate: '可返利：₩ 30.00',
-        address: '提现地址：仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路',
-        earliestTime: '最早提现时间：2018/7/15 13:00'
-        }, {
-        id: '02',
-        time: '2018-08-10  9：00',
-        putForward: '已申请现场提现',
-        money: '',
-        retrurn: '',
-        rebate: '可返利：₩ 30.00',
-        address: '提现地址：仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路',
-        earliestTime: '最早提现时间：2018/7/15 13:00'
-        }, {
-        id: '03',
-        time: '2018-08-10  9：00',
-        putForward: '未申请提现',
-        money: '',
-        retrurn: '返点率：3%',
-        rebate: '',
-        address: '提现地址：仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路仁川市XXX路3路',
-        earliestTime: '最早提现时间：2018/7/15 13:00'
-      },] ,
-      record:{
-        num:'3',
-        consumption:'11000.00',
-        rebate:'330.00'
-      }
-    }
+    
   },
   onLoad: function (options) {
     var that = this;
@@ -64,9 +33,30 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
-  demo: function(){
-   this.setData({
-     activeIndex: 2
-   })
+  onShow:function(){
+    this.getMainList()
+  },
+  getMainList:function(){
+    const that = this;
+    app.Ajax(
+      'User',
+      'POST',
+      'GetMainList',
+      {  },
+      function (json) {
+        console.log('aaa',json);
+        if (json.success) {
+          that.setData({
+            getData: json.data
+          })
+        }else{
+          wx.showToast({
+            title: json.msg.msg,
+            icon: 'none',
+            duration: 2500
+          });
+        }
+      }
+    )
   }
 });

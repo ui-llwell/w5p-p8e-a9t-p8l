@@ -3,9 +3,9 @@
 
 <view class='swiper'>
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;" indicator-color='rgba(256, 256, 256, 0.4)' indicator-active-color='#fff'>
-    <block wx:for='{{imgList}}' wx:key="index">
+    <block wx:for='{{allData.listHome}}' wx:key="index">
       <swiper-item>
-        <image src="{{item.image}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+        <image src="{{item.img}}" data-homeImgId='{{item.homeImgId}}' data-urlCode='{{item.urlCode}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
         <!-- <view class='swiper_text'>
           <text class='swiper_textIntroduce'>{{item.text1}}</text>
           <text class='swiper_textIntroduce'>{{item.text2}}</text>
@@ -17,7 +17,7 @@
   </view>
   
   <view class='consumption'>
-    <view class='consumption_wrap' wx:for='{{consumptionList}}' wx:key='{{index}}' data-shopId='{{item.shopId}}' bindtap='consumption'>
+    <view class='consumption_wrap' wx:for='{{allData.listShop}}' wx:key='{{index}}' data-shopId='{{item.shopId}}' bindtap='consumption'>
       <view class='consumption_wrap_Black'></view>
       <view class='consumption_wrapImg' >
         <image src='{{item.shopListImg}}'></image>

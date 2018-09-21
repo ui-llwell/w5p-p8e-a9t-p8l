@@ -4,41 +4,11 @@ const app = getApp()
 Page({
 
   data: {
-    //图片地址
-    
-      imgList: [
-        {
-          image: "http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/banner1.png",
-          text1: '职业代购白皮书',
-          text2: '首尔免税店扫货指南1',
-          text3: '职业代购手把手教你淘遍首尔1>'
-        },
-        {
-          image: "http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/banner2.png",
-          text1: '职业代购白皮书',
-          text2: '首尔免税店扫货指南2',
-          text3: '职业代购手把手教你淘遍首尔2>'
-        },
-      ],
-      consumptionList: [{
-        shopId: '01',
-        shopListImg: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_img_rebate@3x.png',
-        shopName: '乐天仁川机场第一航站楼店',
-        shopAddr: '仁川市机场路1号',
-        shopPhone: '34123243123'
-        }, {
-          shopId: '02',
-          shopListImg: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_img_shop2@3x.png',
-          shopName: '宝堂TAKARADO',
-          shopAddr: '仁川市机场路1号',
-          shopPhone: '34123243123'
-        }
-      ],
-      
-    
-    
-    
-    
+    allData:{
+      listHome:[],
+      listShop:[]
+    },
+          
     autoplay: true,//是否自动切换  
     indicatorDots: true,//是否显示圆点  
     interval: 5000,//自动切换间隔  
@@ -67,13 +37,17 @@ Page({
       'GetShopShow',
       { },
       function (json) {
-        console.log('json', json)
+        // console.log('json', json)
         if (json.success) {
           that.setData({
-              consumptionList: json.data
+            allData: json.data
           })
         }else{
-
+          wx.showToast({
+            title: json.msg.msg,
+            icon: 'none',
+            duration: 2500
+          });
         }
       }
     )

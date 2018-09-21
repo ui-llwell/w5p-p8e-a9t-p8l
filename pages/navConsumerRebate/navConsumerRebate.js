@@ -8,7 +8,7 @@ var qrcode;
 const app = getApp()
 Page({
   data: {
-    
+    userType:0
   },
   //事件处理函数
   onShareAppMessage: function () {
@@ -40,19 +40,73 @@ Page({
     });
     
   },
+  getScanCode:function(){
+    app.Ajax(
+      'User',
+      'POST',
+      'GetScanCode',
+      { },
+      function (json) {
+        console.log('GetScanCode',json);
+        if (json.success) {
+          wx.sendSocketMessage({
+            data: 'getPayState:' + json.data
+          })
+          qrcode = new QRCode('canvas', {
+            // usingIn: this,
+            text: json.data,
+            width: 220,
+            height: 220,
+            colorDark: "#000",
+            colorLight: "white",
+            correctLevel: QRCode.CorrectLevel.H,
+          });
+        }else{
+          wx.showToast({
+            title: json.msg.msg,
+            icon: 'none',
+            duration: 2500
+          });
+        }
+      }
+    )
+  },
+  getQRcode:function(){
+    qrcode = new QRCode('canvas', {
+      // usingIn: this,
+      text: that.data.shopCode,
+      width: 228,
+      height: 228,
+      colorDark: "#000",
+      colorLight: "white",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
+  },
   onShow: function () {
-    wx.connectSocket({
-      url: 'ws://localhost:54286/api/PG/ws'
+    this.setData({
+      userType:wx.getStorageSync('userType')
     })
-
+    const that = this;
+    wx.connectSocket({
+      url: 'wss://wxapp.llwell.net/api/PG/ws'
+    })
+   
     wx.onSocketOpen(function (res) {
-      wx.sendSocketMessage({
-        data: 'getPayState:' + '1BD20D8049BF0C9F6A24AB2716FE2873'
-      })
+      that.getScanCode();
+      
     })
 
     wx.onSocketMessage(function (res) {
       console.log(res);
+      wx.showModal({
+        content: '已收到付款',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            // console.log('用户点击确定')
+          }
+        }
+      });
     })
 
     

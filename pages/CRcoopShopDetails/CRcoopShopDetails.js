@@ -34,7 +34,11 @@ Page({
           })
         }else{
           
-
+          wx.showToast({
+            title: json.msg.msg,
+            icon: 'none',
+            duration: 2500
+          });
         }
       }
     )
