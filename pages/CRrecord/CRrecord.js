@@ -5,6 +5,7 @@ Page({
     getData: {},
     tabs: ["处理中", "可提现", "已提现"],
     payState:['未申请','已申请','已提现'],
+    payStateEx:['未申请提现','已申请现场提现','已申请银行卡提现'],
     noRecord:'您还没有相关记录哦',
     activeIndex: '',
     sliderOffset: 0,
@@ -44,7 +45,7 @@ Page({
       'GetMainList',
       {  },
       function (json) {
-        console.log('aaa',json);
+        // console.log('aaa',json);
         if (json.success) {
           that.setData({
             getData: json.data

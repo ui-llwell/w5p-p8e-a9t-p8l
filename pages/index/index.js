@@ -20,13 +20,36 @@ Page({
     this.setData({
       langIndex: wx.getStorageSync('langIndex') || 0
     });
-    this.setLanguage();
+    // this.setLanguage();
+    if (wx.getStorageSync('userType') ===undefined){
+      event.on('UserLogin', this, this.setLanguage);
+    }else{
+      this.setLanguage();
+    }
+    
     // ...
   },
   setLanguage() {
-    this.setData({
-      index: wx.T.getLanguage().index
-    });
+    console.log('lsdsds', wx.getStorageSync('userType'))
+    const subString = wx.getStorageSync('agentCode').substring(0, 1)
+    if (wx.getStorageSync('userType')=="1"){
+      if (subString== 'S'){
+        this.setData({
+          index: wx.T.getLanguage().indexShop
+        });
+      }else{
+        this.setData({
+          index: wx.T.getLanguage().indexPurchase
+        },()=>{
+          // console.log('daigou daili wenzi',wx.T.getLanguage().indexPurchase)
+          // console.log('luan',this.data.index)
+        });
+      }
+    }else{
+      this.setData({
+        index: wx.T.getLanguage().index
+      });
+    }
   },
   
   getUserInfo: function(e) {
@@ -38,33 +61,8 @@ Page({
     })
   },
   bindGetUserInfo: function (e) {
-    var that = this;
-    //此处授权得到userInfo
-    // console.log(e.detail.userInfo);
-    //接下来写业务代码
-    // wx.showToast({
-    //   title: '请扫描正确的流连合作店铺码进行注册，如果有问题，请联系流连客服。',
-    //   icon: 'none',
-    //   duration: 2500
-    // })
-    // app.Ajax(
-    //   'Users',
-    //   'POST',
-    //   'BindShop',
-    //   { shopCode: this.data.shop, ...e.detail.userInfo },
-    //   function (json) {
-    //     // console.log(json);
-    //     if (json.success) {
-
-    //     }else{
-
-    //     }
-    //   }
-    // )
-    //最后，记得返回刚才的页面
     wx.navigateTo({
       url: '../registerPhone/registerPhone',
     })
-
   }
 })

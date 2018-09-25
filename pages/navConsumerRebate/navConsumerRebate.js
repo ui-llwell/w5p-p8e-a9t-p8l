@@ -47,7 +47,7 @@ Page({
       'GetScanCode',
       { },
       function (json) {
-        console.log('GetScanCode',json);
+        // console.log('GetScanCode',json);
         if (json.success) {
           wx.sendSocketMessage({
             data: 'getPayState:' + json.data
@@ -97,7 +97,7 @@ Page({
     })
 
     wx.onSocketMessage(function (res) {
-      console.log(res);
+      // console.log(res);
       wx.showModal({
         content: '已收到付款',
         showCancel: false,

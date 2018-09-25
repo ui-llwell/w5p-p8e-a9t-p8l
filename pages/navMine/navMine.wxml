@@ -6,15 +6,8 @@
     <view class='header_background'></view>
     <view class="container">
         <view class="userinfo">
-          <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" > 获取头像昵称 </button>
-          <block wx:else> -->
-            <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover">
-              <open-data  class="userinfo-avatar"  type="userAvatarUrl"></open-data>
-            </image>
+            <open-data  class="userinfo-avatar"  type="userAvatarUrl"></open-data>
             <open-data type="userNickName" class="userinfo-nickname"></open-data>
-          <!-- </block> -->
         </view>
       </view>  
       <!-- 获取头像 名字 -->
@@ -43,14 +36,14 @@
     </view>
     <view class='hot' type="default" type="default" bindtap="openConfirm" >可申请提现金额</view>
     <view class='cash'>₩ <text>{{getData.payMoney}}</text></view>
-    <button   bindtap="setModalStatus" data-status="1" disabled="{{getData.payMoney==0}}">申请现场提现</button>
-    <button  bindtap='qa' disabled="{{getData.payMoney==0}}">申请银行卡提现</button>
+    <button data-payType="0" bindtap="applyRecord" data-status="1" disabled="{{getData.payMoney==0}}">申请现场提现</button>
+    <button data-payType="1" bindtap='applyRecord' data-status="1" disabled="{{getData.payMoney==0}}">申请银行卡提现</button>
   </view>
   
 
     <view class='main'>
       <view class='main_nav' bindtap='iphone'>
-        <text class='main_title'>我的手机号</text>
+        <text class='main_title'>更新手机号</text>
         <text class='main_theme'>{{getData.phone}}</text>
         <text class='main_logo weui-cell__ft weui-cell__ft_in-access'></text>
       </view>
@@ -90,9 +83,9 @@
       <!-- <view class="close_icon" bindtap="setModalStatus" data-status="0">×</view> -->
         <view class="drawer_attr_content">
           <view class="drawer_attr_content_name">提现申请成功</view>
-          <view class="drawer_attr_content_text">提现金额： ₩ 688 </view>
-          <view class="drawer_attr_content_text">提现地址：仁川市XXX路3路</view>
-          <view class="drawer_attr_content_text">最早提现时间：2018/8/22 13:00</view>
+          <view class="drawer_attr_content_text">提现金额： ₩ {{applyRecordData.money}}</view>
+          <view class="drawer_attr_content_text">{{applyRecordData.applyAddr==''?'提现方式':'提现地址'}}：{{applyRecordData.applyAddr==''?'银行卡':applyRecordData.applyAddr}}</view>
+          <view class="drawer_attr_content_text">{{applyRecordData.applyAddr==''?'预计转账时间':'最早提现时间'}}：{{applyRecordData.payTime}}</view>
           <view class="drawer_attr_content_ok" bindtap="setModalStatus" data-status="0">我知道了</view>
         </view>
       </view>

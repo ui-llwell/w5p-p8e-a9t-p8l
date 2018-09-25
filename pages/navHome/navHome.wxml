@@ -33,5 +33,4 @@
         <view>联系电话：{{item.shopPhone}}</view>
       </view>
     </view>
-    
   </view>

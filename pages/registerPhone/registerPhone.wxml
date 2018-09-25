@@ -9,9 +9,10 @@
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </block> -->
       
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover">
+        <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover">
           <open-data  class="userinfo-avatar"  type="userAvatarUrl"></open-data>
-        </image>
+        </image> -->
+        <open-data  class="userinfo-avatar"  type="userAvatarUrl"></open-data>
         <open-data type="userNickName" class="userinfo-nickname"></open-data>
         <!-- <text class="userinfo-nickname"><open-data type="userNickName"></open-data></text> -->
     </view>

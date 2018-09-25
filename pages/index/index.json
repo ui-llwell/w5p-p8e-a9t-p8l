@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "注册代购",
+  "navigationBarTitleText": "注册",
   
   "usingComponents": {
     "i-grid": "../../iview/grid/index",

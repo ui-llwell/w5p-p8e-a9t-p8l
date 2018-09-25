@@ -2,13 +2,18 @@
 
 import locales from './utils/locales'
 import T from './utils/i18n'
-
+import event from './utils/event'
 T.registerLocale(locales)
 T.setLocaleByIndex(wx.getStorageSync('langIndex') || 0);
 wx.T = T
 
 App({
   onLaunch: function (options) {
+    wx.clearStorageSync('agentCode')
+    wx.clearStorageSync('userType')
+    wx.clearStorageSync('token')
+
+
     // 展示本地存储能力
     
     var isDebug = false;//true调试状态使用本地服务器，非调试状态使用远程服务器
@@ -48,21 +53,15 @@ App({
                   wx.setStorageSync('userType', '1')
                   wx.setStorageSync('agentCode', options.query.regAgentCode)
                 }else{
+                  wx.setStorageSync('userType', 0)
                   if (options.query.agentCode === undefined) {
-
                     wx.setStorageSync('agentCode', '999999')
                   } else {
                     wx.setStorageSync('agentCode', options.query.agentCode)
                   }
-                  wx.setStorageSync('userType', 0)
                 }
-                // console.log(options);
-                
-                
-                // wx.navigateTo({
-                //   url: '../index/index'
-                // })
               }
+              event.emit('UserLogin')
             }else{
               wx.showToast({
                 title: json.msg.msg,

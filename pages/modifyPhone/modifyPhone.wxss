@@ -33,7 +33,7 @@ page {
   height: 89rpx;
   color: #1AAD19;
   letter-spacing: 0;
-  text-align: right;
+  text-align: center;
   font-size: 32rpx;
   line-height: 89rpx;
   border-left: 1px solid #F4F4F4;

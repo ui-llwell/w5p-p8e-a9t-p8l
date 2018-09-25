@@ -16,6 +16,8 @@ Page({
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log('f', { ...app.globalData.userInfo})
+   
     app.Ajax(
       // 方法组名称为：User（代购用户），不是系统通用用户Users
       'Users',
@@ -40,12 +42,6 @@ Page({
 
     
   },
-  //事件处理函数
-  // bindViewTap: function () {
-  //   wx.navigateTo({
-  //     url: '../logs/logs'
-  //   })
-  // },
   onLoad: function () {
     console.log('app.globalData.userInfo', app.globalData.userInfo)
     if (app.globalData.userInfo) {
@@ -123,6 +119,10 @@ Page({
         duration: 2000
       });
     }else{
+      this.countDown();
+      that.setData({
+        disabled: true,
+      })
       app.Ajax(
         'Users',
         'POST',
@@ -136,10 +136,7 @@ Page({
               icon: 'none',
               duration: 2000
             });
-            that.countDown();
-            that.setData({
-              disabled: true,
-            })
+            
           }else{
             wx.showToast({
               title: json.msg.msg,
@@ -147,6 +144,12 @@ Page({
               duration: 2500
             });
           }
+        },function(res){
+          wx.showToast({
+            title: res,
+            icon: 'none',
+            duration: 5500
+          });
         }
       )
     }

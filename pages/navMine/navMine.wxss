@@ -27,6 +27,7 @@ page {
   height: 230rpx;
   border-radius: 50%;
   margin-top: -115rpx;
+  overflow: hidden;
 }
 
 .userinfo-nickname {
@@ -165,6 +166,7 @@ padding:0 30rpx;
 line-height:89rpx;
 
 }
+
 .service_1 {
   position: absolute;
   left: 15rpx;

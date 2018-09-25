@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -42,7 +42,7 @@
 					"id": 0,
 					"name": "RegAgentByCode",
 					"pathName": "pages/index/index",
-					"query": "regAgentCode=888888"
+					"query": "agentCode=555555"
 				}
 			]
 		}

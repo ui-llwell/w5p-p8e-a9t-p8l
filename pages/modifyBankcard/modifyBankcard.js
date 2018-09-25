@@ -35,14 +35,14 @@ Page({
 
 
   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     app.Ajax(
       'User',
       'POST',
       'UpdateBankCard',
       { ...e.detail.value },
       function (json) {
-        console.log('jsonsubmit',json);
+        // console.log('jsonsubmit',json);
         if (json.success) {
           wx.showToast({
             title: '绑定成功',
@@ -86,7 +86,7 @@ Page({
       'GetBankCard',
       { },
       function (json) {
-        console.log('ajson',json);
+        // console.log('ajson',json);
         if (json.success) {
           that.setData({
             bankcardUserName: json.data.bankcardUserName,
