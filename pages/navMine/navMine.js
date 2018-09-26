@@ -30,7 +30,7 @@ Page({
       'ApplyRecord',
       { payType: e.currentTarget.dataset.paytype},
       function (json) {
-        console.log('jsonsss',json);
+        // console.log('jsonsss',json);
         if (json.success) {
           that.setData({
             applyRecordData: json.data
@@ -40,7 +40,12 @@ Page({
           }
           )
         }else{
-
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )
@@ -96,11 +101,12 @@ Page({
             getData: json.data
           })
         }else{
-          wx.showToast({
-            title: json.msg.msg,
-            icon: 'none',
-            duration: 2500
-          });
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )

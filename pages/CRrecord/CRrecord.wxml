@@ -17,7 +17,8 @@
 
               <view class='content'>
                   <view class='main' wx:for="{{getData.process.processList}}" wx:key='{{id}}'>
-                    <view class='h1'>
+                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <!-- <view class='putForward r1'>{{payState[item.payState]}}</view> -->
                     </view>
@@ -42,7 +43,8 @@
                 
                 <view class='content'>
                   <view class='main' wx:for="{{getData.pay.payList}}" wx:key='{{id}}'>
-                    <view class='h1'>
+                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <view class='putForward r1'>{{payStateEx[item.payStateEx]}}</view>
                     </view>
@@ -68,7 +70,8 @@
 
                 <view class='content'>
                   <view class='main' wx:for="{{getData.paid.paidList}}" wx:key='{{id}}'>
-                    <view class='h1'>
+                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <view class='putForward r1'>{{payStateEx[item.payStateEx]}}</view>
                     </view>

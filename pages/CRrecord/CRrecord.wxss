@@ -31,8 +31,8 @@ page,
 }
 .h1 {
   width: 690rpx;
-  height: 40rpx;
-  line-height: 40rpx; 
+  /* height: 40rpx; */
+  line-height: 50rpx; 
 }
 .time {
   font-family: PingFangSC-Regular;

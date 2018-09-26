@@ -14,7 +14,7 @@ Page({
 
   },
   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     app.Ajax(
       // 方法组名称为：User（代购用户），不是系统通用用户Users
       'Users',
@@ -28,11 +28,12 @@ Page({
             url: '../navMine/navMine'
           })
         } else {
-          wx.showToast({
-            title: json.msg.msg,
-            icon: 'none',
-            duration: 2500
-          });
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )
@@ -53,17 +54,19 @@ Page({
     var phone = e.detail.value;
     var toastContent;
     if (e.detail.value == '') {
-      wx.showToast({
-        title: '号码不能为空',
-        icon: 'none',
-        duration: 2000,
-      });
+      app.Toast('号码不能为空', 'none', 2000);
+      // wx.showToast({
+      //   title: '号码不能为空',
+      //   icon: 'none',
+      //   duration: 2000,
+      // });
     } else if (phone.trim().length != 11 || !/^1[3|4|5|6|7|8|9]\d{9}$/.test(phone)) {
-      wx.showToast({
-        title: '手机号格式不正确',
-        icon: 'none',
-        duration: 2000,
-      });
+      app.Toast('手机号格式不正确', 'none', 2000);
+      // wx.showToast({
+      //   title: '手机号格式不正确',
+      //   icon: 'none',
+      //   duration: 2000,
+      // });
     }
   },
 
@@ -71,12 +74,17 @@ Page({
   bindButtonTap: function () {
     const that = this;
     if (this.data.phone == '') {
-      wx.showToast({
-        title: '请输入手机号',
-        icon: 'none',
-        duration: 2000
-      });
+      app.Toast('请输入手机号', 'none', 2000);
+      // wx.showToast({
+      //   title: '请输入手机号',
+      //   icon: 'none',
+      //   duration: 2000
+      // });
     } else {
+      that.countDown();
+      that.setData({
+        disabled: true,
+      })
       app.Ajax(
         'Users',
         'POST',
@@ -85,21 +93,20 @@ Page({
         function (json) {
           // console.log('json', json);
           if (json.success) {
-            wx.showToast({
-              title: '短信验证码已发送',
-              icon: 'none',
-              duration: 2000
-            });
-            that.countDown();
-            that.setData({
-              disabled: true,
-            })
+            app.Toast('短信验证码已发送', 'none', 2000);
+            // wx.showToast({
+            //   title: '短信验证码已发送',
+            //   icon: 'none',
+            //   duration: 2000
+            // });
+            
           } else {
-            wx.showToast({
-              title: json.msg.msg,
-              icon: 'none',
-              duration: 2500
-            });
+            app.Toast('', 'none', 3000, json.msg.code);
+            // wx.showToast({
+            //   title: json.msg.msg,
+            //   icon: 'none',
+            //   duration: 2500
+            // });
           }
         }
       )

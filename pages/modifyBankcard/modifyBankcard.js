@@ -44,14 +44,16 @@ Page({
       function (json) {
         // console.log('jsonsubmit',json);
         if (json.success) {
-          wx.showToast({
-            title: '绑定成功',
-          })
+          app.Toast('绑定成功', 'success', 2000);
+          // wx.showToast({
+          //   title: '绑定成功',
+          // })
         }else{
-          wx.showToast({
-            title: '请重新绑定',
-            icon: 'none'
-          })
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: '请重新绑定',
+          //   icon: 'none'
+          // })
         }
       }
     )
@@ -95,7 +97,7 @@ Page({
             bankcardCode: json.data.bankcardCode,
           })
         }else{
-
+          app.Toast('', 'none', 3000, json.msg.code);
         }
       }
     )

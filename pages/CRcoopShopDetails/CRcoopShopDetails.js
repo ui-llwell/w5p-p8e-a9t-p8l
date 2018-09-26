@@ -24,7 +24,7 @@ Page({
       'GetShopInfo',
       { shopId: shopId },
       function (json) {
-        console.log('shopIdjson',json);
+        // console.log('shopIdjson',json);
         if (json.success) {
           that.setData({
             All: json.data
@@ -33,12 +33,12 @@ Page({
             title:json.data.shopName
           })
         }else{
-          
-          wx.showToast({
-            title: json.msg.msg,
-            icon: 'none',
-            duration: 2500
-          });
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )

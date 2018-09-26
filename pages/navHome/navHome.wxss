@@ -5,6 +5,9 @@
 .r1 {
   float: right;
 }
+swiper{
+  height: 560rpx;
+}
 .swiper {
   position: relative;
 }

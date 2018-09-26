@@ -39,15 +39,17 @@ Page({
       function (json) {
         // console.log('json', json)
         if (json.success) {
+          // that.imageLoad();
           that.setData({
             allData: json.data
           })
         }else{
-          wx.showToast({
-            title: json.msg.msg,
-            icon: 'none',
-            duration: 2500
-          });
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )
@@ -57,7 +59,7 @@ Page({
     this.setData({ current: e.detail.current })
   },
   consumption: function (e) {
-    console.log(e.currentTarget.dataset.shopid)
+    // console.log(e.currentTarget.dataset.shopid)
     wx.navigateTo({
       url: '../CRcoopShopDetails/CRcoopShopDetails?shopId=' +e.currentTarget.dataset.shopid,
     })

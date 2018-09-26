@@ -31,6 +31,7 @@ Page({
       },
       fail: function (res) {
         // 转发失败
+        app.Toast(res, 'none', 3000);
       }
     }
   },
@@ -62,11 +63,12 @@ Page({
             correctLevel: QRCode.CorrectLevel.H,
           });
         }else{
-          wx.showToast({
-            title: json.msg.msg,
-            icon: 'none',
-            duration: 2500
-          });
+          app.Toast('', 'none', 3000, json.msg.code);
+          // wx.showToast({
+          //   title: json.msg.msg,
+          //   icon: 'none',
+          //   duration: 2500
+          // });
         }
       }
     )
@@ -97,13 +99,15 @@ Page({
     })
 
     wx.onSocketMessage(function (res) {
+      const that =this;
       // console.log(res);
-      wx.showModal({
-        content: '已收到付款',
-        showCancel: false,
+
+      wx.showToast({
+        title: '已收到付款',
         success: function (res) {
           if (res.confirm) {
             // console.log('用户点击确定')
+            that.getScanCode();
           }
         }
       });
@@ -112,11 +116,12 @@ Page({
     
   },
   onHide: function () {
-    wx.onSocketClose(function (res) {
-      console.log('WebSocket 已关闭！')
-    })
     wx.closeSocket(function (rea) {
       console.log(rea)
     })
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭！')
+    })
+    
   }
 })
