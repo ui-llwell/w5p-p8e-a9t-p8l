@@ -104,11 +104,28 @@ Page({
 
       wx.showToast({
         title: '已收到付款',
-        success: function (res) {
-          if (res.confirm) {
-            // console.log('用户点击确定')
-            that.getScanCode();
-          }
+        duration: 3000,
+        success: function () {
+          // that.getScanCode();
+          // 
+          setTimeout(function(){
+            app.Ajax(
+              'User',
+              'POST',
+              'GetScanCode',
+              {},
+              function (json) {
+                // console.log('GetScanCode',json);
+                if (json.success) {
+                  wx.sendSocketMessage({
+                    data: 'getPayState:' + json.data
+                  })
+                  qrcode.makeCode(json.data)
+                }
+              }
+            )
+          }, 1500)
+// 
         }
       });
     })
