@@ -41,7 +41,7 @@
 				{
 					"id": 0,
 					"name": "RegAgentByCode",
-					"pathName": "pages/index/index",
+					"pathName": "pages/start/start",
 					"query": "regAgentCode=S888888"
 				}
 			]

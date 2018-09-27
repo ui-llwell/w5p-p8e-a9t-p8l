@@ -45,6 +45,12 @@ Page({
         // console.log('jsonsubmit',json);
         if (json.success) {
           app.Toast('绑定成功', 'success', 2000);
+          setTimeout(function(){
+            wx.navigateBack({
+              delta: 1
+            })
+          },2000)
+          
           // wx.showToast({
           //   title: '绑定成功',
           // })

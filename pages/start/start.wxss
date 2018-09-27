@@ -1,0 +1,10 @@
+/* pages/start/start.wxss */
+page{
+  /* width: 150%;
+  height: 200px; */
+  background: url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/fengche.gif') no-repeat  center -45%;
+ 
+} 
+.img{
+  width: 300rpx;
+}

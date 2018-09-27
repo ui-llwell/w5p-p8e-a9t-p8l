@@ -25,55 +25,7 @@ App({
       //本地测试域名
       wx.setStorageSync('domainName', "http://192.168.0.11:55734/api/PG/")
     }
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        this.Ajax(
-          'Open',
-          'POST',
-          'UserLogin',
-          { code: res.code },
-          function (json) {
-            // console.log('~~~',json);
-            if (json.success) {
-              wx.setStorageSync('token', json.data.token);
-              // console.log(json.data.token);
-              
-
-              if (json.data.isReg) {
-                wx.setStorageSync('userType', json.data.userType)
-
-
-                wx.switchTab({
-                  url: '../navHome/navHome',
-                })
-              } else {
-                if (options.query.regAgentCode !== undefined) {
-                  wx.setStorageSync('userType', '1')
-                  wx.setStorageSync('agentCode', options.query.regAgentCode)
-                }else{
-                  wx.setStorageSync('userType', 0)
-                  if (options.query.agentCode === undefined) {
-                    wx.setStorageSync('agentCode', '999999')
-                  } else {
-                    wx.setStorageSync('agentCode', options.query.agentCode)
-                  }
-                }
-              }
-              event.emit('UserLogin')
-            }else{
-              this.Toast('', 'none', 3000, json.msg.code);
-              // wx.showToast({
-              //   title: json.msg.msg,
-              //   icon: 'none',
-              //   duration: 2500
-              // })
-            }
-          }
-        )
-      }
-    })
+    this.login(options)
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -92,6 +44,71 @@ App({
             }
           })
         }
+      }
+    })
+  },
+  login:function(options){
+    // 登录
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        this.Ajax(
+          'Open',
+          'POST',
+          'UserLogin',
+          { code: res.code },
+          function (json) {
+            // console.log('~~~',json);
+            if (json.success) {
+              wx.setStorageSync('token', json.data.token);
+              // console.log(json.data.token);
+
+
+              if (json.data.isReg) {
+                wx.setStorageSync('userType', json.data.userType)
+
+
+                wx.switchTab({
+                  url: '../navHome/navHome',
+                })
+              } else {
+
+                if (options.query.regAgentCode !== undefined) {
+                  wx.setStorageSync('userType', '1')
+                  wx.setStorageSync('agentCode', options.query.regAgentCode)
+                  setTimeout(function () {
+                    wx.redirectTo({
+                      url: '../index/index',
+                    })
+                  }, 0)
+                } else {
+                  wx.setStorageSync('userType', 0)
+                  if (options.query.agentCode === undefined) {
+                    wx.setStorageSync('agentCode', '999999')
+                  } else {
+                    wx.setStorageSync('agentCode', options.query.agentCode)
+                  }
+
+                  setTimeout(function () {
+                    wx.redirectTo({
+                      url: '../index/index',
+                    })
+                  }, 0)
+                }
+                
+
+              }
+              event.emit('UserLogin')
+            } else {
+              this.Toast('', 'none', 3000, json.msg.code);
+              // wx.showToast({
+              //   title: json.msg.msg,
+              //   icon: 'none',
+              //   duration: 2500
+              // })
+            }
+          }
+        )
       }
     })
   },

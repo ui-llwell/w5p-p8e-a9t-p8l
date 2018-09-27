@@ -83,7 +83,7 @@
       <!-- <view class="close_icon" bindtap="setModalStatus" data-status="0">×</view> -->
         <view class="drawer_attr_content">
           <view class="drawer_attr_content_name">提现申请成功</view>
-          <view class="drawer_attr_content_text">提现金额： ₩ {{applyRecordData.money}}</view>
+          <view class="drawer_attr_content_text">提现金额： {{applyRecordData.applyAddr==''?'¥':'₩'}} {{applyRecordData.money}}</view>
           <view class="drawer_attr_content_text">{{applyRecordData.applyAddr==''?'提现方式':'提现地址'}}：{{applyRecordData.applyAddr==''?'银行卡':applyRecordData.applyAddr}}</view>
           <view class="drawer_attr_content_text">{{applyRecordData.applyAddr==''?'预计转账时间':'最早提现时间'}}：{{applyRecordData.payTime}}</view>
           <view class="drawer_attr_content_ok" bindtap="setModalStatus" data-status="0">我知道了</view>

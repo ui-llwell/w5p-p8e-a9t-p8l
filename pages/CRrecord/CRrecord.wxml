@@ -33,6 +33,7 @@
                     <view>共{{getData.process.process}}条记录</view>
                     <view>消费金额总计：₩ {{getData.process.processTotal}}</view>
                     <view>预计返利总计：₩ {{getData.process.processMoney}}</view>
+                    
                   </view>
                   <!-- 当内容List 不为空时隐藏 -->
                   <view class='noRecord' hidden="{{getData.process.processList != ''}}">{{noRecord}}</view>
@@ -50,7 +51,7 @@
                     </view>
                     <view class='h2'>消费金额：₩ {{item.total}}</view>
                     <view class='h2'>返点率：{{item.rate}}</view>
-                    <view class='h2'>预计返利：₩ {{item.money}}</view>
+                    <view class='h2'>预计返利：{{item.payType==1?'¥':'₩'}} {{item.money}}</view>
                     <view class='h2' hidden='{{item.payType==1}}'>提现地址：{{item.payAddr}}</view>
                     <view class='h2'>申请时间：{{item.applyTime}}</view>
                     <view class='h2' hidden='{{item.payType==1}}'>最早提现时间：{{item.payTime}}</view>
@@ -59,7 +60,8 @@
                   <view class='total' hidden="{{getData.pay.payList == ''}}">
                     <view>共{{getData.pay.pay}}条记录</view>
                     <view>消费金额总计：₩ {{getData.pay.payTotal}}</view>
-                    <view>可返利总计：₩ {{getData.pay.payMoney}}</view>
+                    <view>银行卡返利：¥ {{getData.pay.payRmbMoney}}</view>
+                    <view>可提现返利：₩ {{getData.pay.payMoney}}</view>
                   </view>
                   <!-- 当内容List 不为空时隐藏 -->
                   <view class='noRecord' hidden="{{getData.pay.payList != ''}}">{{noRecord}}</view>
@@ -77,7 +79,7 @@
                     </view>
                     <view class='h2'>消费金额：₩ {{item.total}}</view>
                     <view class='h2'>返点率：{{item.rate}}</view>
-                    <view class='h2'>预计返利：₩ {{item.money}}</view>
+                    <view class='h2'>预计返利：{{item.payType==1?'¥':'₩'}} {{item.money}}</view>
                     <view class='h2' hidden='{{item.payType==1}}'>提现地址：{{item.payAddr}}</view>
                     <view class='h2'>申请时间：{{item.applyTime}}</view>
                     <view class='h2' hidden='{{item.payType==1}}'>最早提现时间：{{item.payTime}}</view>
@@ -86,7 +88,8 @@
                   <view class='total' hidden="{{getData.paid.paidList == ''}}">
                     <view>共{{getData.paid.paid}}条记录</view>
                     <view>消费金额总计：₩ {{getData.paid.paidTotal}}</view>
-                    <view>已返利总计：₩ {{getData.paid.paidMoney}}</view>
+                    <view>银行卡已返利：¥ {{getData.paid.paidRmbMoney}}</view>
+                    <view>已提现返利：₩ {{getData.paid.paidMoney}}</view>
                   </view>
                   <!-- 当内容List 不为空时隐藏 -->
                   <view class='noRecord' hidden="{{getData.paid.paidList != ''}}">{{noRecord}}</view>

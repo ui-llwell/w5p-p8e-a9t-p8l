@@ -1,0 +1,3 @@
+<!--pages/start/start.wxml-->
+<!-- <view>Loading</view> -->
+<image class='img' src='http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/qingqiqiu.gif' mode="widthFix" bindtap='login'></image>
