@@ -13,10 +13,11 @@ Page({
   //事件处理函数
   onShareAppMessage: function () {
     return {
-      title: 'XXXXXXXXXX',
-      imageUrl: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantPersonal/shop_icon_phone@3x.png',
-      path: '/page/user?id=123',
+      title: '来购哟哟',
+      imageUrl: 'http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/A-test/qunnv.gif',
+      path: '/page/start/start?id=123',
       success: function (res) {
+        console.log('res',res)
         var shareTickets = res.shareTickets;
         if (shareTickets.length == 0) {
           return false;

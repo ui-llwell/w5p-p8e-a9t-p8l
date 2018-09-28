@@ -10,14 +10,14 @@ Page({
 
   },
   login: function (){
-    app.login()
+    // app.login()
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.login(options)
-    // console.log('~',options)
+    // app.login(options)
+    console.log('~',options)
     // console.log('userType', wx.getStorageSync('userType'))
     
     // event.on('UserLogin',this,app.login)

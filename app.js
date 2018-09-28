@@ -74,6 +74,9 @@ App({
               } else {
 
                 if (options.query.regAgentCode !== undefined) {
+                  // console.log(222222)
+                  console.log(options.query.regAgentCode)
+                  
                   wx.setStorageSync('userType', '1')
                   wx.setStorageSync('agentCode', options.query.regAgentCode)
                   setTimeout(function () {
@@ -82,6 +85,7 @@ App({
                     })
                   }, 0)
                 } else {
+                  // console.log(3333)
                   wx.setStorageSync('userType', 0)
                   if (options.query.agentCode === undefined) {
                     wx.setStorageSync('agentCode', '999999')
@@ -188,6 +192,9 @@ App({
       case 10305:
         content = '更新手机号失败'
         break;
+      case 10306:
+        content = '注册用户失败'
+        break;
       case 10401:
         content = '无效的店铺'
         break;
@@ -202,6 +209,15 @@ App({
         break;
       case 10405:
         content = '申请提现失败'
+        break;
+      case 10501:
+        content = '操作员已存在'
+        break;
+      case 10502:
+        content = '注册操作员失败'
+        break;
+      case 10503:
+        content = '无效的操作员码'
         break;
       default:
         console.log(1);
