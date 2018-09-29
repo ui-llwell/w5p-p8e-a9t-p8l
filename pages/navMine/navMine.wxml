@@ -36,8 +36,8 @@
     </view>
     <view class='hot' type="default" type="default" bindtap="openConfirm" >可申请提现金额</view>
     <view class='cash'>₩ <text>{{getData.payMoney}}</text></view>
-    <button data-payType="0" bindtap="applyRecord" data-status="1" disabled="{{getData.payMoney==0}}">申请现场提现</button>
-    <button data-payType="1" bindtap='applyRecord' data-status="1" disabled="{{getData.payMoney==0}}">申请银行卡提现</button>
+    <button class='btn' data-payType="0" bindtap="applyRecord" data-status="1" disabled="{{getData.payMoney==0}}">申请现场提现</button>
+    <button  class='btn' data-payType="1" bindtap='applyRecord' data-status="1" disabled="{{getData.payMoney==0}}">申请银行卡提现</button>
   </view>
   
 

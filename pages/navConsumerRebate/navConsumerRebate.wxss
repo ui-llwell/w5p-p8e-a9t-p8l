@@ -1,13 +1,16 @@
 /* pages/navConsumerRebate/navConsumerRebate.wxss */
 page{
-/* height: 100%; */
-background-color:rgba(0,0,0,.7);
-
+ position:relative;
+width:750rpx;
+height:100%;
+background:url('http://llwell-wxapp.oss-cn-beijing.aliyuncs.com/PurchasingAssistantShop/bg@3x.jpg') no-repeat 0 0;
+background-size:100% 100%;
+display:block;
 
 }
 .content {
-  width: 600rpx;
-  height: 700rpx;
+  width: 580rpx;
+  height: 900rpx;
   position: absolute;
   left: 0;
   top: 0;
@@ -15,12 +18,13 @@ background-color:rgba(0,0,0,.7);
   right: 0;
   margin: auto;
   background: #fff;
+  box-shadow:0 10px 20px 0 rgba(0,0,0,0.20);
 }
 .img {
   width: 456rpx;
   height: 456rpx;
   margin: 0 auto;
-  padding-top: 47rpx;
+  padding-top: 140rpx;
 }
 .canvasImg{
   width: 100%;
