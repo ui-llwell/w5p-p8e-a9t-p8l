@@ -10,17 +10,17 @@
   </view>
   <view class='iphone'>
     <view class='iphone_left'>
-      银行 <input type='text' name="bankName" value='{{bankName}}'   bindinput='bankInput'  placeholder='招商银行'></input>
+      银行 <input type='text' name="bankName" value='{{bankName}}'   bindinput='bankInput'  placeholder='请输入银行名称'></input>
     </view>
   </view>
   <view class='iphone'>
     <view class='iphone_left'>
-      银行支行 <input type='text' name="subName" value='{{subName}}'  bindinput='bankBranchInput'  maxlength='15' placeholder='请输入银行的支行名称'></input>
+      银行支行 <input type='text' name="subName" value='{{subName}}'  bindinput='bankBranchInput'   placeholder='请输入银行的支行名称'></input>
     </view>
   </view>
   <view class='iphone'>
     <view class='iphone_left'>
-      卡号 <input type='number' name='bankcardCode' value='{{bankcardCode}}'  bindinput='numberInput'  placeholder='请输入正确的卡号'></input>
+      卡号 <input type='number' name='bankcardCode' value='{{bankcardCode}}' maxlength='16' bindinput='numberInput'  placeholder='请输入正确的卡号'></input>
     </view>
   </view>
   <!-- <view>{{num}}</view> -->

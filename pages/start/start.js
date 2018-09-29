@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     // app.login(options)
-    console.log('~',options)
+    // console.log('~',options)
     // console.log('userType', wx.getStorageSync('userType'))
     
     // event.on('UserLogin',this,app.login)
@@ -34,7 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('userType', wx.getStorageSync('userType'))
+    // console.log('userType', wx.getStorageSync('userType'))
   },
 
   /**
