@@ -14,7 +14,7 @@ Page({
   },
   formSubmit: function (e) {
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    console.log('f', { ...app.globalData.userInfo})
+    // console.log('f', { ...app.globalData.userInfo})
     if (!!app.globalData.userInfo.nickName){
       app.Ajax(
         // 方法组名称为：User（代购用户），不是系统通用用户Users

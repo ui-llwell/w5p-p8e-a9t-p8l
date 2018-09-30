@@ -61,6 +61,7 @@ App({
             // console.log('~~~',json);
             if (json.success) {
               wx.setStorageSync('token', json.data.token);
+              wx.setStorageSync('sex', json.data.sex);
               // console.log(json.data.token);
 
 

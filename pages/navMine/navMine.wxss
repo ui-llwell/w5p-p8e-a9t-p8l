@@ -48,8 +48,17 @@ page {
   height: 390rpx;
   /* background: lightblue; */
   background-image: -webkit-linear-gradient(45deg, rgb(247,112,98), rgb(254,81,150)); 
-  /* background-image: linear-gradient(-45deg, #5A8ADA 0%, #91CCFC 100%); */
+  /* background-image: linear-gradient(-45deg, rgb(90, 218, 207) 0%, rgb(218, 248, 111) 100%); */
 
+}
+.F{
+  /* background-image: linear-gradient(-45deg, rgb(218, 90, 160) 0%, rgb(91, 147, 211) 100%); */
+  background-image: -webkit-linear-gradient(45deg, rgb(247,112,98), rgb(254,81,150)); 
+}
+.M{
+  /* background-image: linear-gradient(-45deg, rgb(218, 90, 160) 0%, rgb(91, 147, 211) 100%); */
+  /* background-image: linear-gradient(-45deg, #5A8ADA 0%, #91CCFC 100%); */
+  background-image: linear-gradient(-45deg, rgb(90, 218, 207) 0%, rgb(218, 248, 111) 100%);
 }
 .content_rebate {
   text-align: center;

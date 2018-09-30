@@ -9,7 +9,9 @@ Page({
   
 //获取头像信息等
   onLoad: function () {
-    
+    this.setData({
+      sex:wx.getStorageSync('sex')
+    })
   },
   iphone: function(){
     wx.navigateTo({
@@ -71,20 +73,10 @@ Page({
         );
       }
   },
-  onReady: function () {
-    var a = this.data.money
-    if (a == '0.00') {
-      console.log(a)
-      this.setData({
-        disabled: true,
-      })
-    }
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function (res) {
     this.getMainInfo();
   },
   getMainInfo:function(){

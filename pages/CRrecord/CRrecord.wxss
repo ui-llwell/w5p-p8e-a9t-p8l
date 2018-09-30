@@ -36,7 +36,7 @@ page,
 }
 .time {
   font-family: PingFangSC-Regular;
-  font-size: 34rpx;
+  font-size: 26rpx;
   color: #222222;
   text-align: left;
 }

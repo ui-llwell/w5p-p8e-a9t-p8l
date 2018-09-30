@@ -36,8 +36,8 @@ swiper{
 }
 
 .consumption_wrap {
-  width: 698rpx;
-  height: 387rpx;
+  width: 700rpx;
+  height: 400rpx;
   position: relative;
   margin: 30rpx auto 41rpx;
 }
@@ -45,8 +45,8 @@ swiper{
   position: absolute;
   left: 0;
   top:0;
-  width: 698rpx;
-  height: 387rpx;
+  width: 100%;
+  height: 100%;
   display: block;
   border-radius: 9rpx;
   overflow: hidden;
@@ -56,8 +56,8 @@ swiper{
   position: absolute;
   left: 0;
   top:0;
-  width: 698rpx;
-  height: 387rpx;
+  width: 100%;
+  height: 100%;
   display: block;
   border-radius: 9rpx;
   overflow: hidden;
@@ -65,8 +65,8 @@ swiper{
   z-index: 1;
 }
 .consumption_wrapImg image {
-  width: 698rpx;
-  height: 387rpx;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 .consumption_wrapName {

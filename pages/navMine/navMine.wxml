@@ -3,7 +3,7 @@
 <view class='index'>
    <view class='header'>
    <!-- 获取头像 名字 -->
-    <view class='header_background'></view>
+    <view class="header_background {{sex==2?'F':'M'}}"></view>
     <view class="container">
         <view class="userinfo">
             <open-data  class="userinfo-avatar"  type="userAvatarUrl"></open-data>

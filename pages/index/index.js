@@ -103,7 +103,8 @@ Page({
   // },
   bindGetUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
-    console.log('asdasd', e.detail.userInfo)
+    wx.setStorageSync('gender', e.detail.userInfo.gender )
+    // console.log('asdasd', e.detail.userInfo)
     wx.navigateTo({
       url: '../registerPhone/registerPhone',
     })

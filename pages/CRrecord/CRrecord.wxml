@@ -17,7 +17,7 @@
 
               <view class='content'>
                   <view class='main' wx:for="{{getData.process.processList}}" wx:key='{{id}}'>
-                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 borBotGray'>❤{{item.shopName}}</view>
                     <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <!-- <view class='putForward r1'>{{payState[item.payState]}}</view> -->
@@ -44,7 +44,7 @@
                 
                 <view class='content'>
                   <view class='main' wx:for="{{getData.pay.payList}}" wx:key='{{id}}'>
-                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 borBotGray'>❤{{item.shopName}}</view>
                     <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <view class='putForward r1'>{{payStateEx[item.payStateEx]}}</view>
@@ -52,10 +52,10 @@
                     <view class='h2'>消费金额：₩ {{item.total}}</view>
                     <view class='h2'>返点率：{{item.rate}}</view>
                     <view class='h2'>预计返利：{{item.payType==1?'¥':'₩'}} {{item.money}}</view>
-                    <view class='h2' hidden='{{item.payType==1}}'>提现地址：{{item.payAddr}}</view>
-                    <view class='h2'>申请时间：{{item.applyTime}}</view>
-                    <view class='h2' hidden='{{item.payType==1}}'>最早提现时间：{{item.payTime}}</view>
-                    <view class='h2' hidden='{{item.payType==0}}'>预计转账时间：{{item.payTime}}</view>
+                    <view class='h2' hidden='{{item.payType==1||item.payState==0}}'>提现地址：{{item.payAddr}}</view>
+                    <view class='h2' hidden='{{item.payState==0}}'>申请时间：{{item.applyTime}}</view>
+                    <view class='h2' hidden='{{item.payType==1||item.payState==0}}'>最早提现时间：{{item.payTime}}</view>
+                    <view class='h2' hidden='{{item.payType==0||item.payState==0}}'>预计转账时间：{{item.payTime}}</view>
                   </view>
                   <view class='total' hidden="{{getData.pay.payList == ''}}">
                     <view>共{{getData.pay.pay}}条记录</view>
@@ -72,7 +72,7 @@
 
                 <view class='content'>
                   <view class='main' wx:for="{{getData.paid.paidList}}" wx:key='{{id}}'>
-                    <view class='h1'>❤{{item.shopName}}</view>
+                    <view class='h1 borBotGray'>❤{{item.shopName}}</view>
                     <view class='h1 clearfix'>
                       <view class='time f1'>{{item.recordTime}}</view>
                       <view class='putForward r1'>{{payStateEx[item.payStateEx]}}</view>
